@@ -1,0 +1,92 @@
+html, body {
+/*	width: 100%;
+	height: 100%;*/
+	background-color: #FCFBE3;
+	/* vanilla cream */
+	color: black;
+}
+
+#banner {
+	width: 100%;
+}
+
+#nav {
+	width: 100%;
+	text-align: center;
+}
+
+#nav div {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#nav a {
+	text-decoration: none;
+	padding: 20px;
+}
+
+.active {
+	background-color: #914240;
+	/* burgundy */
+}
+
+.active a {
+	color: white;
+}
+
+/*
+nav li {
+	width: 13.28%;
+	display: inline-block;
+	text-align: center;
+}
+
+nav li a {
+	padding: 20px 30px;
+}*/
+
+#hero {
+	background-image: url('../img/hero.jpg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 40px;
+}
+
+#hero-text h2 {
+	margin-top: 0;
+}
+
+#hero button {
+	background-color: #914240;
+	/* burgundy */
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+#hero button:hover {
+	background-color: #FCFBE3;
+	/* vanilla cream */
+	color: black;
+}
+
+#content {
+	margin: auto 5%;
+}
+
+#footer {
+	width: 100%;
+	display: inline-block;
+	background-color: #333;
+	color: white;
+}
+
+#footer h4 {
+	text-align: center;
+	color: white;
+}
