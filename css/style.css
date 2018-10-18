@@ -80,6 +80,22 @@ nav li a {
 	margin: auto 5%;
 }
 
+#form {
+	display: block;
+	margin: auto;
+	background-color: #914240;
+	/* burgundy */
+}
+
+label {
+	color: white;
+}
+
+input[type=text], input[type=password] {
+	/*padding: 10px 0;*/
+	width: 100%;
+}
+
 #footer {
 	width: 100%;
 	display: inline-block;
