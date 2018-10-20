@@ -1,0 +1,19 @@
+{
+  "name": "mehahypnotherapy",
+  "version": "1.0.0",
+  "description": "A website for hypnotherapy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kibbitTheKnight/MehaHypnotherapy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kibbitTheKnight/MehaHypnotherapy/issues"
+  },
+  "homepage": "https://github.com/kibbitTheKnight/MehaHypnotherapy#readme"
+}
