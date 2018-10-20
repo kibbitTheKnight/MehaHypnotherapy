@@ -13,7 +13,7 @@ const client = new Client({
 		connectionString: process.env.DATABASE_URL,
 		ssl: true,
 	});
-
+/*
 var request = require('request').defaults({
 		encoding: null
 	});
@@ -178,4 +178,4 @@ app.get('/db', function (req, res) {
 });
 
 // start app on port
-app.listen(port, () => console.log("active on port: " + port));
+app.listen(port, () => console.log("active on port: " + port));*/
