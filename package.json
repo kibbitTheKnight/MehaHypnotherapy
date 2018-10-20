@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/kibbitTheKnight/MehaHypnotherapy/issues"
   },
-  "homepage": "https://github.com/kibbitTheKnight/MehaHypnotherapy#readme"
+  "homepage": "https://github.com/kibbitTheKnight/MehaHypnotherapy#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "csprng": "^0.1.2",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "path": "^0.12.7"
+  }
 }
