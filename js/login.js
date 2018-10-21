@@ -49,7 +49,7 @@ function createAccount()
 		 clearText('pass');
 	 }
 	 
-     $.post("/createAccount", userdata, function (res, status) {
+     $.post("createAccount.html", userdata, function (res, status) {
           console.log(status);
      }).fail(function() {
           alert("signup failed");
