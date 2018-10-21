@@ -16,12 +16,12 @@ function login()
      }
 
      console.log(JSON.stringify(userdata));
-     $.post(url_login, userdata, function (res, status) {
+     /*$.post(url_login, userdata, function (res, status) {
 		//id = res;
 	  window.location.replace('/');
      }).fail(function () {
           displayErr();
-     })
+     })*/
 
 //   **** If login successfull do this....  ****
      if(status == 200)
