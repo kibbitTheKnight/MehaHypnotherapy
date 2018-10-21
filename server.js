@@ -101,6 +101,9 @@ app.get('/rates', function (req, res) {
 app.get('/contact', function (req, res) {
         res.sendFile(__dirname + '/html/contact.html');
 });
+app.get('/', function (req, res) {
+        res.sendFile(__dirname + '/html/index.html');
+});
 
 /*
 app.get('/login', function (req, res) {
