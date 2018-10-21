@@ -30,11 +30,6 @@ function login()
      }
 }
 
-function clearText(elementId)
-{
-     document.getElementById(elementId).value = '';
-}
-
 function createAccount()
 {
      //   Initialize url.
@@ -60,10 +55,4 @@ function createAccount()
      }).fail(function() {
           alert("signup failed");
      });
-
-     //   Clear all text fields.
-     clearText('#user');
-     clearText('#pass');
-     clearText('#repass');
-     clearText('#email');
 }
