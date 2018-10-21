@@ -49,11 +49,11 @@ function createAccount()
 		 clearText('pass');
 	 }
 	 
-     $.post("/createAccount", userdata, function (res, status) {
+     /*$.post("/createAccount", userdata, function (res, status) {
           console.log(status);
      }).fail(function() {
           alert("signup failed");
-     });
+     });*/
 
      //   Clear all text fields.
      clearText('user');
