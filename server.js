@@ -5,7 +5,7 @@ const express = require('express');
 const Session = require('express-session');
 const cookieParser = require('cookie-parser');
 const csprng = require('csprng');
-/*
+
 const {
 	Client
 } = require('pg');
@@ -14,13 +14,13 @@ const client = new Client({
 		connectionString: process.env.DATABASE_URL,
 		ssl: true,
 	});
-/*
+
 var request = require('request').defaults({
 		encoding: null
 	});
 
 const saltRounds = 10;
-*/
+
 function checkInput(inputobj) {
 	let prohibitedChars = ['\"', '\'', ';']
 	for (let key in inputobj) {
