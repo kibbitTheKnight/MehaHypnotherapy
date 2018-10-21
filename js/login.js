@@ -42,7 +42,7 @@ function createAccount()
 		  repassword: $('#repass').val()
      }
 
-	 if(password != repass)
+	 if(userdata.password != userdata.repassword)
 	 {
 		 alert("signup failed");
 		 clearText('repass');
