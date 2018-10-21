@@ -110,13 +110,13 @@ app.get('/createAccount', function (req, res) {
         res.sendFile(__dirname + '/html/createAccount.html');
 });
 
-/*
+
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {
 		console.log("Serving login.html");
-		res.sendFile(__dirname + '/public/html/StartScreen.html');
+		res.sendFile(__dirname + '/html/login.html');
 	} else {
-		res.redirect("/dashboard");
+		res.redirect("/");
 	}
 });
 
@@ -157,21 +157,21 @@ app.post('/login', function (req, response) {
 	}
 });
 
-
+/*
 app.get('/logout', function (req, res) {
 	req.session.loggedin = false;
 	req.session.id = undefined;
 	res.redirect("/login");
 })
-
-app.post('/signup', function (req, res) {
-	console.log("recieving signup info:");
+*/
+app.post('/createAccount', function (req, res) {
+	console.log("receiving signup info:");
 	if (checkInput(req.body)) {
 		res.status(400).send();
 	} else {
 		let userdata = req.body;
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);
-		let query = "INSERT INTO users (username, passwordhash, firstname, lastname, email) VALUES (\'" + userdata.username + "\', \'" + hash + "\', \'" + userdata.firstname + "\', \'" + userdata.lastname + "\', \'" + userdata.email + "\');";
+		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.username + "\', \'" + hash + "\', \'" + userdata.email + "\');";
 
 		client.query(query, (err, res2) => {
 			if (err) {
@@ -181,7 +181,7 @@ app.post('/signup', function (req, res) {
 		res.status(200).send();
 	}
 });
-
+/*
 // dumps user table if logged in
 app.get('/db', function (req, res) {
 	console.log("showing DB results");
