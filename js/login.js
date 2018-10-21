@@ -29,3 +29,35 @@ function login()
 		
      }
 }
+function createAccount()
+{
+     //   Initialize url.
+     var url_signup = 'https://mehahypnotherapy.herokuapp.com/createAccount';
+
+     //   Initialize userdata
+     let userdata = {
+          email: $('#email').val(),
+          username: $('#user').val(),
+		  password: $('#pass').val(),
+		  repassword: $('#repass').val()
+     }
+
+	 if(password != repass)
+	 {
+		 alert("signup failed");
+		 clearText('repass');
+		 clearText('pass');
+	 }
+	 
+     $.post("/createAccount", userdata, function (res, status) {
+          console.log(status);
+     }).fail(function() {
+          alert("signup failed");
+     });
+
+     //   Clear all text fields.
+     clearText('user');
+     clearText('pass');
+     clearText('repass');
+     clearText('email');
+}
