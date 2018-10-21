@@ -62,8 +62,8 @@ function createAccount()
      });
 
      //   Clear all text fields.
-     clearText('user');
-     clearText('pass');
-     clearText('repass');
-     clearText('email');
+     clearText('#user');
+     clearText('#pass');
+     clearText('#repass');
+     clearText('#email');
 }
