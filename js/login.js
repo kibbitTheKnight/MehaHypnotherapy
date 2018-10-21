@@ -29,6 +29,12 @@ function login()
 		
      }
 }
+
+function clearText(elementId)
+{
+     document.getElementById(elementId).value = '';
+}
+
 function createAccount()
 {
      //   Initialize url.
