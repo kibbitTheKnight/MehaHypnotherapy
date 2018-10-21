@@ -163,7 +163,7 @@ app.get('/logout', function (req, res) {
 	req.session.id = undefined;
 	res.redirect("/login");
 })
-*/
+
 app.post('/signup', function (req, res) {
 	console.log("recieving signup info:");
 	if (checkInput(req.body)) {
