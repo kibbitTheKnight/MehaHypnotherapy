@@ -104,6 +104,9 @@ app.get('/contact', function (req, res) {
 app.get('/', function (req, res) {
         res.sendFile(__dirname + '/html/index.html');
 });
+app.get('/login', function (req, res) {
+        res.sendFile(__dirname + '/html/login.html');
+});
 
 /*
 app.get('/login', function (req, res) {
