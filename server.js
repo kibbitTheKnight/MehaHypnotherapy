@@ -106,6 +106,50 @@ app.get('/', function (req, res) {
 });
 app.get('/login', function (req, res) {
         res.sendFile(__dirname + '/html/login.html');
+		
+		if (req.session.loggedin != true) {
+		console.log("Serving login.html");
+		res.sendFile(__dirname + '/public/html/StartScreen.html');
+	} else {
+		res.redirect("/dashboard");
+	}
+});
+
+app.post('/login', function (req, response) {
+	console.log("receiving login info:");
+	if (req.body.username > 50 ||
+		checkInput(req.body)) {
+		response.status(400).send();
+	} else {
+		 let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
+		 client.query(query, (err, res) => {
+	 	if (!err){
+		 	if (res.rowCount == 1) {
+		 		bcrypt.compare(req.body.password, res.rows[0].passwordhash, (err2, same) => {
+		 			if (!err2){
+		 			console.log("password compare: " + same);
+		 			if (same) {
+		 				req.session.loggedin = true;
+		 				req.session.userid = res.rows[0].id;
+		 				console.log("redirecting to home");
+		 				response.set('Access-Control-Allow-Origin','*');
+		 				response.status(200).send();
+		 			} else {
+					response.status(401).send();
+		 			}
+		 			} else {
+		 				console.log(err2);
+		 			}
+
+				});
+		 	} else {
+		 		response.status(401).send();
+		 	}
+		 	} else {
+		 		console.log(err);
+		 	}
+		 });
+	}
 });
 
 /*
