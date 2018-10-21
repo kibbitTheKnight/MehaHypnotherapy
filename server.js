@@ -120,7 +120,7 @@ app.get('/login', function (req, res) {
 
 app.post('/login', function (req, response) {
 	console.log("receiving login info:");
-	if (req.body.username > 50 ||
+	if (req.body.username > 30 ||
 		checkInput(req.body)) {
 		response.status(400).send();
 	} else {
@@ -154,6 +154,7 @@ app.post('/login', function (req, response) {
 		 });
 	}
 });
+
 
 app.get('/logout', function (req, res) {
 	req.session.loggedin = false;

@@ -6,7 +6,6 @@ function login()
      var user = $('#user-login').val();
 
      let userdata = {
-		  email: $('#user-email').val(),
           username: $('#user-login').val(),
           password: $('#password-login').val()
      }
