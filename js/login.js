@@ -33,7 +33,7 @@ function createAccount()
 {
      //   Initialize url.
      var url_signup = 'https://mehahypnotherapy.herokuapp.com/createAccount';
-
+	 console.log("I'm here!");
      //   Initialize userdata
      let userdata = {
           email: $('#email').val(),
