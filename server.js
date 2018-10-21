@@ -20,7 +20,7 @@ var request = require('request').defaults({
 	});
 
 const saltRounds = 10;
-
+*/
 function checkInput(inputobj) {
 	let prohibitedChars = ['\"', '\'', ';']
 	for (let key in inputobj) {
@@ -33,7 +33,7 @@ function checkInput(inputobj) {
 	}
 	return false;
 }
-*/
+
 const app = express(); // main app object
 
 const port = process.env.PORT || 8080; // uses server env port if exists, else uses default 8080
