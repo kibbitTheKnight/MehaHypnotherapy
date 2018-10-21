@@ -1,5 +1,5 @@
 
-//const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const path = require('path');
 const bodyparser = require('body-parser');
 const express = require('express');
