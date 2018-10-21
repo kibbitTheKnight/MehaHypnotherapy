@@ -106,6 +106,9 @@ app.get('/', function (req, res) {
 app.get('/login', function (req, res) {
         res.sendFile(__dirname + '/html/login.html');
 });
+app.get('/createAccount', function (req, res) {
+        res.sendFile(__dirname + '/html/createAccount.html');
+});
 
 /*
 app.get('/login', function (req, res) {
@@ -160,7 +163,7 @@ app.get('/logout', function (req, res) {
 	req.session.id = undefined;
 	res.redirect("/login");
 })
-
+*/
 app.post('/signup', function (req, res) {
 	console.log("recieving signup info:");
 	if (checkInput(req.body)) {
