@@ -91,11 +91,17 @@ app.get('/index', function (req, res) {
 		res.redirect("/");
 	}
 });
-/*
-app.get('/about', function (req, res) {
-        res.sendFile(__dirname + '/public/html/about.html');
+
+app.get('/services', function (req, res) {
+        res.sendFile(__dirname + '/public/html/services.html');
 });
-*/
+app.get('/rates', function (req, res) {
+        res.sendFile(__dirname + '/public/html/rates.html');
+});
+app.get('/contact', function (req, res) {
+        res.sendFile(__dirname + '/public/html/contact.html');
+});
+
 /*
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {
