@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Meha's Hypnotherapy</title>
-
+	<script type="text/javascript" src="../js/login.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Responsive Grid System (for equal columns) -->
@@ -30,14 +30,14 @@
 	<div id="banner">
 		
 		<div class="section group" id="nav">
-			<div class="col span_1_of_8"><a href="index.html">Home</a></div>
+			<div class="col span_1_of_8"><a href="/">Home</a></div>
 			<div class="col span_1_of_8"><a href="">About</a></div>
-			<div class="col span_1_of_8"><a href="services.html">Services</a></div>
+			<div class="col span_1_of_8"><a href="/services">Services</a></div>
 			<div class="col span_1_of_8"><a href="">Products</a></div>
-			<div class="col span_1_of_8"><a href="rates.html">Rates</a></div>
-			<div class="col span_1_of_8"><a href="contact.html">Contact</a></div>
+			<div class="col span_1_of_8"><a href="/rates">Rates</a></div>
+			<div class="col span_1_of_8"><a href="/contact">Contact</a></div>
 			<div class="col span_1_of_8"><a href="">Schedule</a></div>
-			<div class="col span_1_of_8 active"><a href="login.html">Login</a></div>
+			<div class="col span_1_of_8 active"><a href="/login">Login</a></div>
 		</div>
 
 		<div id="hero">
@@ -60,10 +60,10 @@
 			<form>
 
 				<div class="row">
-					<div class="col span_1_of_4">
+					<!--<div class="col span_1_of_4">
 						<label>E-Mail</label>
 						<input type="text" name="email">
-					</div>
+					</div>-->
 				</div>
 				
 				<div class="row">
@@ -81,12 +81,12 @@
 				</div>
 				<div class="row">
 					<div class="col span_1_of_4">
-						<input type="submit" value="Submit">
+						<input type="submit" onclick="login();" value="Submit">
 					</div>
 				</div>
 				<div class = "row">
 					<div class = "col span_1_of_4">
-						<h5 style="color: white">Don't have an account? <a href="createAccount.html">Create one here!</a></h5>
+						<h5 style="color: white">Don't have an account? <a href="/createAccount">Create one here!</a></h5>
 					</div>
 				</div>
 

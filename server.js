@@ -1,5 +1,4 @@
-
-//const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const path = require('path');
 const bodyparser = require('body-parser');
 const express = require('express');
@@ -101,6 +100,12 @@ app.get('/rates', function (req, res) {
 app.get('/contact', function (req, res) {
         res.sendFile(__dirname + '/html/contact.html');
 });
+app.get('/', function (req, res) {
+        res.sendFile(__dirname + '/html/index.html');
+});
+app.get('/login', function (req, res) {
+        res.sendFile(__dirname + '/html/login.html');
+});
 
 /*
 app.get('/login', function (req, res) {
@@ -114,7 +119,7 @@ app.get('/login', function (req, res) {
 
 app.post('/login', function (req, response) {
 	console.log("receiving login info:");
-	if (req.body.username > 50 ||
+	if (req.body.username > 30 ||
 		checkInput(req.body)) {
 		response.status(400).send();
 	} else {
@@ -148,6 +153,7 @@ app.post('/login', function (req, response) {
 		 });
 	}
 });
+
 
 app.get('/logout', function (req, res) {
 	req.session.loggedin = false;
