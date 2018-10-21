@@ -181,6 +181,7 @@ app.post('/createAccount', function (req, res) {
 		 	}
 		});
 		res.status(200).send();
+		res.sendFile(__dirname + '/html/index.html');
 	}
 });
 /*
