@@ -16,12 +16,12 @@ function login()
      }
 
      console.log(JSON.stringify(userdata));
-     /*$.post(url_login, userdata, function (res, status) {
+     $.post(url_login, userdata, function (res, status) {
 		//id = res;
 	  window.location.replace('/');
      }).fail(function () {
           displayErr();
-     })*/
+     })
 
 //   **** If login successfull do this....  ****
      if(status == 200)
@@ -49,11 +49,11 @@ function createAccount()
 		 clearText('pass');
 	 }
 	 
-     /*$.post("/createAccount", userdata, function (res, status) {
+     $.post("/createAccount", userdata, function (res, status) {
           console.log(status);
      }).fail(function() {
           alert("signup failed");
-     });*/
+     });
 
      //   Clear all text fields.
      clearText('user');
