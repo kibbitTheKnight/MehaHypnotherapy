@@ -1,3 +1,4 @@
+
 const bcrypt = require("bcrypt");
 const path = require('path');
 const bodyparser = require('body-parser');
@@ -5,6 +6,7 @@ const express = require('express');
 const Session = require('express-session');
 const cookieParser = require('cookie-parser');
 const csprng = require('csprng');
+/*
 const {
 	Client
 } = require('pg');
@@ -32,6 +34,7 @@ function checkInput(inputobj) {
 	}
 	return false;
 }
+*/
 const app = express(); // main app object
 
 const port = process.env.PORT || 8080; // uses server env port if exists, else uses default 8080
@@ -40,11 +43,12 @@ app.use(bodyparser.urlencoded({
 		extended: true
 	}))
 app.use(cookieParser());
+/*
 app.use(Session({
 		secret: csprng(256, 36)
-	}));
+	}));*/
 app.enable('trust proxy');
-
+/*
 app.use(function (req, res, next) {
 	if (req.secure) {
 		// request was via https, so do no special handling
@@ -54,6 +58,7 @@ app.use(function (req, res, next) {
 		res.redirect('https://' + req.headers.host + req.url);
 	}
 });
+/*
 app.use(function (req, res, next) {
 	console.log(req.session.userid);
 	if (checkInput(req.body)) {
@@ -62,21 +67,22 @@ app.use(function (req, res, next) {
 		next();
 	}
 });
+*/
 
-app.use('/', express.static('public/'));
-app.use('/media', express.static('public/img/'));
-app.use('/html', express.static('public/html/'));
-app.use('/css', express.static('public/css/'));
-app.use('/js', express.static('public/js/'));
+app.use('/img', express.static('img/'));
+app.use('/html', express.static('html/'));
+app.use('/css', express.static('css/'));
+app.use('/js', express.static('js/'));
 
 // routes
-client.connect(); // connect to db
+//client.connect(); // connect to db
 // for homepage get requests
 app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/public/html/index.html');
+	res.sendFile(__dirname + '/html/index.html');
 });
 
 app.get('/index', function (req, res) {
+	console.log("I was called");
 	if (req.session.loggedin) {
 		console.log(req.session.loggedin);
 		console.log("Serving index.html");
@@ -85,11 +91,12 @@ app.get('/index', function (req, res) {
 		res.redirect("/");
 	}
 });
-
+/*
 app.get('/about', function (req, res) {
         res.sendFile(__dirname + '/public/html/about.html');
 });
-
+*/
+/*
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {
 		console.log("Serving login.html");
@@ -176,6 +183,6 @@ app.get('/db', function (req, res) {
 	});
 	res.redirect("/");
 });
-
+*/
 // start app on port
-app.listen(port, () => console.log("active on port: " + port));*/
+app.listen(port, () => console.log("active on port: " + port));
