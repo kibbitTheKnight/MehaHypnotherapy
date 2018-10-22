@@ -172,13 +172,13 @@ app.post('/createAccount', function (req, res) {
 		let userdata = req.body;
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);
 		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.username + "\', \'" + hash + "\', \'" + userdata.email + "\');";
-		console.log(userdata.username + " " + hash + " " + userdata.email);
 		client.query(query, (err, res2) => {
 			if (err) {
 				console.log(err.stack);
 		 	}
 		});
-		//res.status(200).send();
+		console.log("url: " + process.env.DATABASE_URL);
+		res.status(200).send();
 		res.sendFile(__dirname + '/html/index.html');
 	}
 });
