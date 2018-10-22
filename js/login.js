@@ -46,8 +46,6 @@ function createAccount()
 	 if(userdata.password != userdata.repassword)
 	 {
 		 alert("signup failed");
-		 clearText('repass');
-		 clearText('pass');
 	 }
 	 
      $.post("/createAccount", userdata, function (res, status) {
