@@ -22,7 +22,6 @@ function login()
      }).fail(function () {
           displayErr();
      })
-//does this do anything???
 //   **** If login successfull do this....  ****
      if(status == 200)
      {
