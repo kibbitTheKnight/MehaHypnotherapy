@@ -20,13 +20,17 @@ function login()
 		//id = res;
 	  window.location.replace('/');
      }).fail(function () {
-          displayErr();
+          alert("login failed");
      })
 //   **** If login successfull do this....  ****
      if(status == 200)
      {
-		
+		console.log("logged in");
      }
+	 else
+	 {
+		alert("username or password is incorrect");
+	 }
 }
 
 function createAccount()
