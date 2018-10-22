@@ -198,7 +198,7 @@ app.get('/db', function (req, res) {
 		console.log(dbresult);
 		res.send(dbresult);
 	});
-	res.redirect("/");
+	//res.redirect("/");
 });
 
 // start app on port
