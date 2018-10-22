@@ -44,7 +44,7 @@ function createAccount()
 
 	 if(userdata.password != userdata.repassword)
 	 {
-		 alert("signup failed");
+		 alert("signup failed, passwords did not match");
 	 }
 	 
      $.post("/createAccount", userdata, function (res, status) {
