@@ -195,7 +195,7 @@ app.get('/db', function (req, res) {
 		console.log(dbresult);
 		res.send(dbresult);
 	});
-	response.status(200).send();
+	res.status(200).send();
 });
 
 // start app on port
