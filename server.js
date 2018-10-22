@@ -131,7 +131,7 @@ app.post('/login', function (req, response) {
 		 client.query(query, (err, res) => {
 	 	if (!err){
 		 	if (res.rowCount == 1) {
-		 		bcrypt.compare(req.body.password, res.rows[0].passwordhash, (err2, same) => {
+		 		bcrypt.compare(req.body.password, res.rows[0].password, (err2, same) => {
 		 			if (!err2){
 		 			console.log("password compare: " + same);
 		 			if (same) {
