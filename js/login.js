@@ -33,7 +33,14 @@ function createAccount()
 {
      //   Initialize url.
      var url_signup = 'https://mehahypnotherapy.herokuapp.com/createAccount';
-	 console.log("I'm here!");
+	 
+	 console.log($('#pass').val());
+	 if($('#pass').val() != $('#repass').val())
+	 {
+		 alert("signup failed, passwords did not match");
+		 return;
+	 }
+	 
      //   Initialize userdata
      let userdata = {
           email: $('#email').val(),
@@ -41,11 +48,6 @@ function createAccount()
 		  password: $('#pass').val(),
 		  repassword: $('#repass').val()
      }
-
-	 if(userdata.password != userdata.repassword)
-	 {
-		 alert("signup failed");
-	 }
 	 
      $.post("/createAccount", userdata, function (res, status) {
           console.log(status);

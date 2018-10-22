@@ -42,10 +42,10 @@ app.use(bodyparser.urlencoded({
 		extended: true
 	}))
 app.use(cookieParser());
-/*
+
 app.use(Session({
 		secret: csprng(256, 36)
-	}));*/
+	}));
 app.enable('trust proxy');
 /*
 app.use(function (req, res, next) {
@@ -170,21 +170,20 @@ app.post('/createAccount', function (req, res) {
 		res.status(400).send();
 	} else {
 		let userdata = req.body;
-		console.log(req.body);
-		console.log(userdata.password);
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);
-		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.user + "\', \'" + hash + "\', \'" + userdata.email + "\');";
-
+		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.username + "\', \'" + hash + "\', \'" + userdata.email + "\');";
+		query = "INSERT INTO users (username, email, password) VALUES(\'blah\', \'blah@me.com\', \'blahpassword\');";
 		client.query(query, (err, res2) => {
 			if (err) {
 				console.log(err.stack);
 		 	}
 		});
-		//res.status(200).send();
-		res.sendFile(__dirname + '/html/index.html');
+		console.log(query);
+		res.status(200).send();
+		//res.sendFile(__dirname + '/html/index.html');
 	}
 });
-/*
+
 // dumps user table if logged in
 app.get('/db', function (req, res) {
 	console.log("showing DB results");
@@ -199,8 +198,8 @@ app.get('/db', function (req, res) {
 		console.log(dbresult);
 		res.send(dbresult);
 	});
-	res.redirect("/");
+	//res.redirect("/");
 });
-*/
+
 // start app on port
 app.listen(port, () => console.log("active on port: " + port));
