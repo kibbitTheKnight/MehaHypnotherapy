@@ -171,8 +171,8 @@ app.post('/createAccount', function (req, res) {
 	} else {
 		let userdata = req.body;
 		console.log(req.body);
-		console.log(res.body);
-		console.log(req.username);
+		console.log(userdata.password);
+		console.log(userdata.username);
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);
 		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.user + "\', \'" + hash + "\', \'" + userdata.email + "\');";
 
