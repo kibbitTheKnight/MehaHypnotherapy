@@ -107,3 +107,7 @@ input[type=text], input[type=password] {
 	text-align: center;
 	color: white;
 }
+
+#services img {
+	border-radius: 50%;
+}
