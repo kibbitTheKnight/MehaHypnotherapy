@@ -179,6 +179,7 @@ app.post('/createAccount', function (req, res) {
 		});
 		console.log(query);
 		res.status(200).send();
+		res.redirect('/');
 		//res.sendFile(__dirname + '/html/index.html');
 	}
 });
