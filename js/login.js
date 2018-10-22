@@ -18,7 +18,7 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
-	  window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+	  window.location.replace('/');
      }).fail(function () {
           alert("login failed");
      })
@@ -30,7 +30,7 @@ function login()
 	 else
 	 {
 		alert("username or password is incorrect");
-		window.location.replace('https://www.youtube.com/watch?v=FTQbiNvZqaY');
+		window.location.replace('/about');
 	 }
 }
 
