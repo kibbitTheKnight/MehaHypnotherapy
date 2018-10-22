@@ -171,6 +171,7 @@ app.post('/createAccount', function (req, res) {
 	} else {
 		let userdata = req.body;
 		console.log(req.body);
+		console.log(userdata);
 		console.log(userdata.password);
 		console.log(userdata.username);
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);

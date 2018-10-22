@@ -38,6 +38,7 @@ function createAccount()
 	 if($('#pass').val() != $('#repass').val())
 	 {
 		 alert("signup failed, passwords did not match");
+		 return;
 	 }
 	 
      //   Initialize userdata
