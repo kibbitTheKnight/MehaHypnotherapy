@@ -42,10 +42,10 @@ app.use(bodyparser.urlencoded({
 		extended: true
 	}))
 app.use(cookieParser());
-/*
+
 app.use(Session({
 		secret: csprng(256, 36)
-	}));*/
+	}));
 app.enable('trust proxy');
 /*
 app.use(function (req, res, next) {
