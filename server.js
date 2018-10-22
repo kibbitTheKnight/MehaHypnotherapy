@@ -124,6 +124,7 @@ app.post('/login', function (req, response) {
 	console.log("receiving login info:");
 	if (req.body.username > 30 ||
 		checkInput(req.body)) {
+		console.log("1");
 		response.status(400).send();
 	} else {
 		 let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
@@ -148,9 +149,11 @@ app.post('/login', function (req, response) {
 
 				});
 		 	} else {
+				console.log("3");
 		 		response.status(401).send();
 		 	}
 		 	} else {
+				console.log("2");
 		 		console.log(err);
 		 	}
 		 });
