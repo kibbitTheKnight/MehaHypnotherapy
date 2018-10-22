@@ -177,8 +177,8 @@ app.post('/createAccount', function (req, res) {
 				console.log(err.stack);
 		 	}
 		});
+		//res.status(200).send();
 		res.redirect("/");
-		res.status(200).send();
 	}
 });
 
