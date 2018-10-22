@@ -179,7 +179,7 @@ app.post('/createAccount', function (req, res) {
 		});
 		console.log("url: " + process.env.DATABASE_URL);
 		res.status(200).send();
-		res.sendFile(__dirname + '/html/index.html');
+		//res.sendFile(__dirname + '/html/index.html');
 	}
 });
 /*
