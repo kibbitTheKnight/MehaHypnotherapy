@@ -177,7 +177,7 @@ app.post('/createAccount', function (req, res) {
 				console.log(err.stack);
 		 	}
 		});
-		//res.status(200).send();
+		res.status(200).send();
 	}
 });
 
@@ -195,7 +195,6 @@ app.get('/db', function (req, res) {
 		console.log(dbresult);
 		res.send(dbresult);
 	});
-	res.status(200).send();
 });
 
 // start app on port
