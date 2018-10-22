@@ -30,7 +30,7 @@ function login()
 	 else
 	 {
 		console.log(status);
-		alert("username or password is incorrect");
+		alert(status);
 		window.location.replace('/login');
 	 }
 }
