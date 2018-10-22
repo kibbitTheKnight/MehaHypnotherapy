@@ -183,7 +183,7 @@ app.post('/createAccount', function (req, res) {
 		//res.sendFile(__dirname + '/html/index.html');
 	}
 });
-/*
+
 // dumps user table if logged in
 app.get('/db', function (req, res) {
 	console.log("showing DB results");
@@ -200,6 +200,6 @@ app.get('/db', function (req, res) {
 	});
 	res.redirect("/");
 });
-*/
+
 // start app on port
 app.listen(port, () => console.log("active on port: " + port));
