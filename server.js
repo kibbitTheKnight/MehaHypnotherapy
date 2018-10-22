@@ -74,7 +74,7 @@ app.use('/css', express.static('css/'));
 app.use('/js', express.static('js/'));
 
 // routes
-//client.connect(); // connect to db
+client.connect(); // connect to db
 // for homepage get requests
 app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/html/index.html');
