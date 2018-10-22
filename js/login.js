@@ -50,7 +50,6 @@ function createAccount()
      }
 	 
      $.post("/createAccount", userdata, function (res, status) {
-		  successRedirect: '/',
           console.log(status);
      }).fail(function() {
           alert("signup failed");
