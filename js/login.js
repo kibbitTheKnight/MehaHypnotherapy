@@ -23,7 +23,7 @@ function login()
           alert("login failed");
      })
 //   **** If login successfull do this....  ****
-     if(status == 200)
+     if(status == 200 || status == 304)
      {
 		console.log("logged in");
      }
