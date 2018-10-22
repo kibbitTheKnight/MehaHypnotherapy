@@ -172,7 +172,6 @@ app.post('/createAccount', function (req, res) {
 		let userdata = req.body;
 		let hash = bcrypt.hashSync(userdata.password, saltRounds);
 		let query = "INSERT INTO users (username, password, email) VALUES (\'" + userdata.username + "\', \'" + hash + "\', \'" + userdata.email + "\');";
-		query = "INSERT INTO users (username, email, password) VALUES(\'blah\', \'blah@me.com\', \'blahpassword\');";
 		client.query(query, (err, res2) => {
 			if (err) {
 				console.log(err.stack);
