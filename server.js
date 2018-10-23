@@ -91,14 +91,23 @@ app.get('/index', function (req, res) {
 	}
 });
 
+app.get('/about', function (req, res) {
+        res.sendFile(__dirname + '/html/about.html');
+});
 app.get('/services', function (req, res) {
         res.sendFile(__dirname + '/html/services.html');
+});
+app.get('/products', function (req, res) {
+        res.sendFile(__dirname + '/html/products.html');
 });
 app.get('/rates', function (req, res) {
         res.sendFile(__dirname + '/html/rates.html');
 });
 app.get('/contact', function (req, res) {
         res.sendFile(__dirname + '/html/contact.html');
+});
+app.get('/schedule', function (req, res) {
+        res.sendFile(__dirname + '/html/schedule.html');
 });
 app.get('/', function (req, res) {
         res.sendFile(__dirname + '/html/index.html');
@@ -108,6 +117,9 @@ app.get('/login', function (req, res) {
 });
 app.get('/createAccount', function (req, res) {
         res.sendFile(__dirname + '/html/createAccount.html');
+});
+app.get('/dashboard', function (req, res) {
+        res.sendFile(__dirname + '/html/dashboard.html');
 });
 
 

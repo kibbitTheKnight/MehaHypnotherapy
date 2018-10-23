@@ -18,7 +18,7 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
-	  window.location.replace('/');
+	  window.location.replace('/dashboard');
      }).fail(function () {
           alert("Incorrect username or password");
      })
