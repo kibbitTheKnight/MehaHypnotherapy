@@ -18,15 +18,10 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
-	  window.location.replace('/');
+	  window.location.replace('/dashboard');
      }).fail(function () {
-          displayErr();
+          alert("Incorrect username or password");
      })
-//   **** If login successfull do this....  ****
-     if(status == 200)
-     {
-		
-     }
 }
 
 function createAccount()
@@ -54,4 +49,5 @@ function createAccount()
      }).fail(function() {
           alert("signup failed");
      });
+	 window.location.href="https://mehahypnotherapy.herokuapp.com/login"
 }

@@ -4,6 +4,9 @@
 	<title>Meha's Hypnotherapy</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
 
 	<!-- Responsive Grid System (for equal columns) -->
 	<!-- Example:
@@ -57,15 +60,7 @@
 		<h2 style="text-align: center">Login</h2>
 
 		<div id="form">
-			<form method="post">
-
-				<div class="row">
-					<div class="col span_1_of_4">
-						<label>E-Mail</label>
-						<input type="text" name="email">
-					</div>
-				</div>
-				
+			<form method="post">				
 				<div class="row">
 					<div class="col span_1_of_4">
 						<label>Username</label>
@@ -81,7 +76,7 @@
 				</div>
 				<div class="row">
 					<div class="col span_1_of_4">
-						<input type="submit" value="Submit">
+						<input type="button" onclick="login()" value="Submit">
 					</div>
 				</div>
 				<div class = "row">

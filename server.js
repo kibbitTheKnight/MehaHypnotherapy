@@ -91,14 +91,23 @@ app.get('/index', function (req, res) {
 	}
 });
 
+app.get('/about', function (req, res) {
+        res.sendFile(__dirname + '/html/about.html');
+});
 app.get('/services', function (req, res) {
         res.sendFile(__dirname + '/html/services.html');
+});
+app.get('/products', function (req, res) {
+        res.sendFile(__dirname + '/html/products.html');
 });
 app.get('/rates', function (req, res) {
         res.sendFile(__dirname + '/html/rates.html');
 });
 app.get('/contact', function (req, res) {
         res.sendFile(__dirname + '/html/contact.html');
+});
+app.get('/schedule', function (req, res) {
+        res.sendFile(__dirname + '/html/schedule.html');
 });
 app.get('/', function (req, res) {
         res.sendFile(__dirname + '/html/index.html');
@@ -108,6 +117,9 @@ app.get('/login', function (req, res) {
 });
 app.get('/createAccount', function (req, res) {
         res.sendFile(__dirname + '/html/createAccount.html');
+});
+app.get('/dashboard', function (req, res) {
+        res.sendFile(__dirname + '/html/dashboard.html');
 });
 
 
@@ -120,40 +132,59 @@ app.get('/login', function (req, res) {
 	}
 });
 
-app.post('/login', function (req, response) {
+app.post('/login', function (req, response) 
+{
 	console.log("receiving login info:");
 	if (req.body.username > 30 ||
-		checkInput(req.body)) {
+		checkInput(req.body)) 
+	{
+		console.log("1");
 		response.status(400).send();
-	} else {
+	} 
+	else 
+	{
 		 let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
-		 client.query(query, (err, res) => {
-	 	if (!err){
-		 	if (res.rowCount == 1) {
-		 		bcrypt.compare(req.body.password, res.rows[0].passwordhash, (err2, same) => {
-		 			if (!err2){
-		 			console.log("password compare: " + same);
-		 			if (same) {
-		 				req.session.loggedin = true;
-		 				req.session.userid = res.rows[0].id;
-		 				console.log("redirecting to home");
-		 				response.set('Access-Control-Allow-Origin','*');
-		 				response.status(200).send();
-		 			} else {
+		 client.query(query, (err, res) => 
+		{
+			if (!err)
+			{
+				if (res.rowCount == 1) 
+				{
+					bcrypt.compare(req.body.password, res.rows[0].password, (err2, same) => 
+					{
+						if (!err2)
+						{
+							console.log("password compare: " + same);
+							if (same) 
+							{
+								req.session.loggedin = true;
+								req.session.userid = res.rows[0].id;
+								console.log("redirecting to home");
+								response.set('Access-Control-Allow-Origin','*');
+								response.status(200).send();
+								return;
+							} 
+							else 
+							{
+								response.status(401).send();
+							}
+						} 
+						else 
+						{
+							console.log(err2);
+						}
+					});
+				} else {
+					console.log("3");
 					response.status(401).send();
-		 			}
-		 			} else {
-		 				console.log(err2);
-		 			}
-
-				});
-		 	} else {
-		 		response.status(401).send();
-		 	}
-		 	} else {
-		 		console.log(err);
-		 	}
-		 });
+				}
+			} 
+			else
+			{
+				console.log("2");
+				console.log(err);
+			}
+		});
 	}
 });
 
@@ -177,9 +208,7 @@ app.post('/createAccount', function (req, res) {
 				console.log(err.stack);
 		 	}
 		});
-		console.log(query);
 		res.status(200).send();
-		//res.sendFile(__dirname + '/html/index.html');
 	}
 });
 
@@ -197,7 +226,6 @@ app.get('/db', function (req, res) {
 		console.log(dbresult);
 		res.send(dbresult);
 	});
-	//res.redirect("/");
 });
 
 // start app on port
