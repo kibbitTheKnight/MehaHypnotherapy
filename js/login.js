@@ -23,15 +23,15 @@ function login()
           alert("login failed");
      })
 //   **** If login successfull do this....  ****
-     if(status == 200 || status == 304)
+     //if(status == 200 || status == 304)
      {
 		console.log("logged in");
      }
-	 else
+	 //else
 	 {
-		console.log(status);
-		alert(status);
-		window.location.replace('/login');
+		//console.log(status);
+		//alert(status);
+		//window.location.replace('/login');
 	 }
 }
 
