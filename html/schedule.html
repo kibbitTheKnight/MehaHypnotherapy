@@ -26,6 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
+
 <body>
 	<div id="banner">
 		
@@ -53,7 +54,76 @@
 
 	<div class="content">
 		<h2>Schedule with Meha</h2>
+
+		<!-- booking widget -->
+		<div id="booking">
+			<script src="//simplybook.me/v2/widget/widget.js"></script>
+			<script>
+				var widget = new SimplybookWidget({
+					"widget_type":"iframe",
+					"url":"https:\/\/mehahypnotherapy.simplybook.me",
+					"theme":"classic","theme_settings":{
+						"timeline_show_end_time":"0",
+						"sb_base_color":"#8E3D40",
+						"body_bg_color":"#fdfdfd",
+						"hide_img_mode":"0",
+						"sb_busy":"#dad2ce",
+						"sb_available":"#d3e0f1"
+					},
+					"timeline":"modern_week",
+					"datepicker":"inline_datepicker",
+					"is_rtl":false,
+					"app_config":{
+						"predefined":{
+							"service":"1",
+							"provider":"1"
+						}
+					}
+				});
+			</script>
+			<iframe src="https://mehahypnotherapy.simplybook.me/v2/?theme_id=38&widget-type=iframe&is_rtl=0&timeline=modern_week&datepicker=inline_datepicker#book/"></iframe>
+		</div>
+
 	</div>
 
+	<div id="footer">
+		<div class="row">
+			<div class="col-1">
+				<h4>Home</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>About</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>Services</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>Products</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>Rates</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>Contact</h4>
+			</div>
+
+			<div class="col-1">
+				<h4>Schedule</h4>
+			</div>
+
+			<!-- <div class="">
+				
+			</div> -->
+		</div>
+
+		<div style="border-top: solid 2px; color: white">
+			[email] | [address] | Credits: Web Dev Bred	
+		</div>
+	</div>
 </body>
 </html>
