@@ -20,19 +20,8 @@ function login()
 		//id = res;
 	  window.location.replace('/');
      }).fail(function () {
-          alert("login failed");
+          alert("Incorrect username or password");
      })
-//   **** If login successfull do this....  ****
-     //if(status == 200 || status == 304)
-     {
-		console.log("logged in");
-     }
-	 //else
-	 {
-		//console.log(status);
-		//alert(status);
-		//window.location.replace('/login');
-	 }
 }
 
 function createAccount()
