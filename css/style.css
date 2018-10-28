@@ -64,11 +64,10 @@ html, body {
 #nav div {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-top: 18px;
-	padding-bottom: 18px;
 }
 
 #nav a {
+	display: block;
 	text-decoration: none;
 	padding: 20px;
 }
@@ -77,6 +76,13 @@ html, body {
 	background-color: #8E3D40;
 	/* burgundy */
 	color: white;
+}
+
+#subNav {
+	background-color: #FCFBE3;
+	/* vanilla cream */
+	position: absolute;
+	display: none;
 }
 
 .active {
@@ -122,12 +128,22 @@ button:hover {
 	margin: auto 5%;
 }
 
+#subcontent {
+	margin: auto 8%;
+	margin-top: 50px;
+}
+
+#subcontent h3 {
+	border-top: 1px solid #8E3D40;
+	/* burgundy */
+}
+
 #hypnotherapy, #services, #testimonials {
 	margin-bottom: 5%;
 }
 
 #testimonials {
-	margin: 7% 3% 10px 3%;
+	margin: 7% 3% 0 3%;
 	width: auto !important;
 }
 
@@ -154,8 +170,9 @@ input[type=text], input[type=password] {
 }
 
 #footer {
-	padding: 5px;
 	background-color: #333;
+	margin-top: 50px;
+	padding: 5px;
 }
 
 #footer div, #footer h4, #footer h5 {

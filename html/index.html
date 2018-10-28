@@ -44,10 +44,16 @@
 				<div id="bar-3"></div>
 			</div>
 
+			<!-- nav items -->
 			<div class="section group" id="nav">
 				<div class="col span_1_of_7 active"><a href="/">Home</a></div>
 				<div class="col span_1_of_7"><a href="/about">About</a></div>
-				<div class="col span_1_of_7"><a href="/services">Services</a></div>
+				<div class="col span_1_of_7"><a href="/services">Services &#9660;</a></div>
+				<div id="subNav">
+					<div><a href="/services/hypnosis">Hypnosis</a></div>
+					<div><a href="/services/health">Health Coaching</a></div>
+					<div><a href="/services/quantum">Quantum Hypnosis</a></div>
+				</div>
 				<div class="col span_1_of_7"><a href="/events">Events</a></div>
 				<div class="col span_1_of_7"><a href="/schedule">Schedule</a></div>
 				<div class="col span_1_of_7"><a href="/contact">Contact</a></div>
@@ -101,26 +107,24 @@
 
 		<div class="row" id="services">
 			<div class="col-4">
-					<img src="https://via.placeholder.com/300x300.jpg">
-					<h3>Hypnosis</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="/hypnosis"><button>Read more</button></a>
-				</div>
-				<div class="col-4">
-					<img src="https://via.placeholder.com/300x300.jpg">
-					<h3>Health coaching</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="/health"><button>Read more</button></a>
-				</div>
-				<div class="col-4">
-					<img src="https://via.placeholder.com/300x300.jpg">
-					<h3>Quantum hypnosis</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="/quantum"><button>Read more</button></a>
-				</div>
+				<img src="https://via.placeholder.com/300x300.jpg">
+				<h3>Hypnosis</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<a href="/services/hypnosis"><button>Read more</button></a>
+			</div>
+			<div class="col-4">
+				<img src="https://via.placeholder.com/300x300.jpg">
+				<h3>Health coaching</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<a href="/services/health"><button>Read more</button></a>
+			</div>
+			<div class="col-4">
+				<img src="https://via.placeholder.com/300x300.jpg">
+				<h3>Quantum hypnosis</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<a href="/services/quantum"><button>Read more</button></a>
 			</div>
 		</div>
-
 
 
 		<div class="row" id="testimonials">
@@ -164,33 +168,7 @@
 		</div>
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-	<script>
-	    document.getElementById("bars").onclick = function() {
-	    	var navContainer = document.getElementById("navContainer");
-	    	navContainer.classList.toggle("change");
-	    	
-	    	var nav = document.getElementById("nav");
-	    	if (nav.style.display == "block") {
-	    		// hide navbar
-	    		nav.style.display = "none";
-	    		navContainer.style.backgroundColor = "transparent";
-	    	}
-	    	else {
-	    		// show navbar
-	    		nav.style.display = "block";
-	    		navContainer.style.backgroundColor = "#FCFBE3";
-	    	}
-	    }
-	</script>
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="../js/func.js"></script>
 </body>
 </html>

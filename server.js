@@ -100,8 +100,8 @@ app.get('/services', function (req, res) {
 app.get('/products', function (req, res) {
         res.sendFile(__dirname + '/html/products.html');
 });
-app.get('/rates', function (req, res) {
-        res.sendFile(__dirname + '/html/rates.html');
+app.get('/events', function (req, res) {
+        res.sendFile(__dirname + '/html/events.html');
 });
 app.get('/contact', function (req, res) {
         res.sendFile(__dirname + '/html/contact.html');
@@ -120,6 +120,15 @@ app.get('/createAccount', function (req, res) {
 });
 app.get('/dashboard', function (req, res) {
         res.sendFile(__dirname + '/html/dashboard.html');
+});
+app.get('/services/hypnosis', function (req, res) {
+        res.sendFile(__dirname + '/html/services/hypnosis.html');
+});
+app.get('/services/health', function (req, res) {
+        res.sendFile(__dirname + '/html/services/health.html');
+});
+app.get('/services/quantum', function (req, res) {
+        res.sendFile(__dirname + '/html/services/quantum.html');
 });
 
 
