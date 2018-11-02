@@ -152,7 +152,7 @@ app.get('/login', function (req, res) {
 
 app.post('/login', function (req, response) 
 {
-	var loginLink = document.getElementById("loginbutton");
+	var loginLink = $("#loginbutton");
 	console.log("receiving login info:");
 	if (req.body.username > 30 ||
 		checkInput(req.body)) 
