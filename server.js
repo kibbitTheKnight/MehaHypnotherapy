@@ -182,7 +182,7 @@ app.post('/login', function (req, response)
 								response.set('Access-Control-Allow-Origin','*');
 								response.status(200).send();
 								// loginLink.innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
-								$("#loginLink").html("Log Out");
+								//$("#loginLink").html("Log Out");
 								return;
 							} 
 							else 

@@ -19,6 +19,7 @@ function login()
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
 	  window.location.replace('/dashboard');
+	  $('#loginbutton').innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
      }).fail(function () {
           alert("Incorrect username or password");
      })
