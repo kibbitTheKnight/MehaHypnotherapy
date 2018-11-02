@@ -152,7 +152,7 @@ app.get('/login', function (req, res) {
 
 app.post('/login', function (req, response) 
 {
-	var loginLink = $("#loginbutton");
+	//var loginLink = $("#loginbutton");
 	console.log("receiving login info:");
 	if (req.body.username > 30 ||
 		checkInput(req.body)) 
@@ -181,7 +181,7 @@ app.post('/login', function (req, response)
 								console.log("redirecting to home");
 								response.set('Access-Control-Allow-Origin','*');
 								response.status(200).send();
-								loginLink.innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
+								//loginLink.innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
 								return;
 							} 
 							else 
