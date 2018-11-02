@@ -119,7 +119,15 @@ app.get('/createAccount', function (req, res) {
         res.sendFile(__dirname + '/html/createAccount.html');
 });
 app.get('/dashboard', function (req, res) {
+	//only redirect to dashboard if logged in
+	if(req.session.login)
+	{
         res.sendFile(__dirname + '/html/dashboard.html');
+	}
+	else
+	{
+		res.redirect("/login");
+	}
 });
 
 
