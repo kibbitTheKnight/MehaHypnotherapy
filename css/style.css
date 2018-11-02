@@ -10,21 +10,79 @@ html, body {
 	width: 100%;
 }
 
+#navContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    width: 100%;
+}
+
+#logo {
+	float: left;
+}
+
+#bars {
+	cursor: pointer;
+    width: 35px;
+    padding: 5px 10px;
+    float: right;
+}
+
+/* 3 horixontal nav bars */
+#bar-1, #bar-2, #bar-3 {
+	width: 30px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	/* animation time */
+	transition: 0.4s;
+}
+
+/* vvvvv bar animation vvvvv */
+.change div #bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change div #bar-2 {opacity: 0;}
+
+.change div #bar-3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ^^^^^ bar animation ^^^^^ */
+
 #nav {
-	width: 100%;
+	display: none;
 	text-align: center;
+    background-color: #FCFBE3;
+	/* vanilla cream */
 }
 
 #nav div {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 #nav a {
+	display: block;
 	text-decoration: none;
 	padding: 20px;
+}
+
+#nav a:hover {
+	background-color: #8E3D40;
+	/* burgundy */
+	color: white;
+}
+
+#subNav {
+	background-color: #FCFBE3;
+	/* vanilla cream */
+	position: absolute;
+	display: none;
 }
 
 .active {
@@ -36,17 +94,6 @@ html, body {
 	color: white;
 }
 
-/*
-nav li {
-	width: 13.28%;
-	display: inline-block;
-	text-align: center;
-}
-
-nav li a {
-	padding: 20px 30px;
-}*/
-
 #hero {
 	background-image: url('../img/hero.jpg');
 	height: 100%;
@@ -54,23 +101,24 @@ nav li a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding: 40px;
+	padding: 50px;
 }
 
 #hero-text h2 {
 	margin-top: 0;
 }
 
-#hero button {
+button {
 	background-color: #8E3D40;
 	/* burgundy */
 	color: white;
-	 padding: 5px 10px; 
+	padding: 10px; 
 	cursor: pointer;
 	border: none;
+	border-radius: 4px;
 }
 
-#hero button:hover {
+button:hover {
 	background-color: #FCFBE3;
 	/* vanilla cream */
 	color: black;
@@ -78,6 +126,31 @@ nav li a {
 
 .content {
 	margin: auto 5%;
+}
+
+#subcontent {
+	margin: auto 8%;
+	margin-top: 50px;
+}
+
+#subcontent h3 {
+	border-top: 1px solid #8E3D40;
+	/* burgundy */
+}
+
+#hypnotherapy, #services, #testimonials {
+	margin-bottom: 5%;
+}
+
+#testimonials {
+	margin: 7% 3% 0 3%;
+	width: auto !important;
+}
+
+blockquote {
+	font-size: 22px;
+	font-style: italic;
+	margin-top: 0;
 }
 
 #form {
@@ -97,14 +170,12 @@ input[type=text], input[type=password] {
 }
 
 #footer {
-	width: 100%;
-	display: inline-block;
 	background-color: #333;
-	color: white;
+	margin-top: 50px;
+	padding: 5px;
 }
 
-#footer h4 {
-	text-align: center;
+#footer div, #footer h4, #footer h5 {
 	color: white;
 }
 
