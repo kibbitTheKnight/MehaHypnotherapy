@@ -120,6 +120,7 @@ app.get('/createAccount', function (req, res) {
 });
 app.get('/dashboard', function (req, res) {
 	//only redirect to dashboard if logged in
+	console.log(req.session.login);
 	if(req.session.login)
 	{
         res.sendFile(__dirname + '/html/dashboard.html');
