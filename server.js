@@ -153,12 +153,12 @@ app.get('/login', function (req, res) {
 app.post('/logout', function(req, response)
 {
 	
-}
+});
 
 app.post('/getState', function(req, response)
 {
-	response.set(
-}
+	
+});
 
 app.post('/login', function (req, response) 
 {
