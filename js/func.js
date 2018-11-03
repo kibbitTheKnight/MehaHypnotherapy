@@ -45,6 +45,15 @@ let userInfo =
 	loggedin: false
 }
 
+function logout()
+{
+	$.post("/logout", function (res, status) {
+	  window.location.replace('/login');
+     }).fail(function () {
+          alert("Something went wrong??");
+     })
+}
+
 window.addEventListener("load", function load(event){
 	
 	$.post('/getstate', function(res, status)
