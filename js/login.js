@@ -1,5 +1,11 @@
 const urlBase = 'https://mehahypnotherapy.herokuapp.com'
 
+let userInfo =
+{
+	username: "";
+	loggedin: false;
+}
+
 function login()
 {
      var url_login = 'https://mehahypnotherapy.herokuapp.com/login';
@@ -18,12 +24,22 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
-	  $('#loginbutton').text("Log Out");
-	  window.location.replace('/dashboard');
+		userInfo.username = res.username;
+		userInfo.loggedin = res.loggedin;
+		
+		console.log(userInfo.username);
+		console.log(userInfo.loggedin);
+		
+		console.log("Changing login button");
+		window.location.replace('/dashboard');
      }).fail(function () {
           alert("Incorrect username or password");
      })
 }
+
+window.addEventListener("load", function load(event){
+	$.post(
+},false);
 
 function createAccount()
 {

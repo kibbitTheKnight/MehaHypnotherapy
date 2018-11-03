@@ -150,6 +150,16 @@ app.get('/login', function (req, res) {
 	}
 });
 
+app.post('/logout', function(req, response)
+{
+	
+}
+
+app.post('/getState', function(req, response)
+{
+	response.set(
+}
+
 app.post('/login', function (req, response) 
 {
 	//var loginLink = $("#loginbutton");
@@ -177,12 +187,10 @@ app.post('/login', function (req, response)
 							if (same) 
 							{
 								req.session.loggedin = true;
-								req.session.userid = res.rows[0].id;
+								req.session.username = res.rows[0].username;
 								console.log("redirecting to home");
 								response.set('Access-Control-Allow-Origin','*');
-								response.status(200).send();
-								// loginLink.innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
-								//$("#loginLink").html("Log Out");
+								response.status(200).send(req.session);
 								return;
 							} 
 							else 
