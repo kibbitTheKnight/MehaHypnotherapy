@@ -2,8 +2,8 @@ const urlBase = 'https://mehahypnotherapy.herokuapp.com'
 
 let userInfo =
 {
-	username: "";
-	loggedin: false;
+	username: "",
+	loggedin: false
 }
 
 function login()
