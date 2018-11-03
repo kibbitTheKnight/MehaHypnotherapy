@@ -18,14 +18,37 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
-	  window.location.replace('/');
+	  $('#loginbutton').text("Log Out");
+	  window.location.replace('/dashboard');
      }).fail(function () {
-          displayErr();
+          alert("Incorrect username or password");
      })
+}
 
-//   **** If login successfull do this....  ****
-     if(status == 200)
-     {
-		
+function createAccount()
+{
+     //   Initialize url.
+     var url_signup = 'https://mehahypnotherapy.herokuapp.com/createAccount';
+	 
+	 console.log($('#pass').val());
+	 if($('#pass').val() != $('#repass').val())
+	 {
+		 alert("signup failed, passwords did not match");
+		 return;
+	 }
+	 
+     //   Initialize userdata
+     let userdata = {
+          email: $('#email').val(),
+          username: $('#user').val(),
+		  password: $('#pass').val(),
+		  repassword: $('#repass').val()
      }
+	 
+     $.post("/createAccount", userdata, function (res, status) {
+          console.log(status);
+     }).fail(function() {
+          alert("signup failed");
+     });
+	 window.location.href="https://mehahypnotherapy.herokuapp.com/login"
 }

@@ -4,6 +4,8 @@
 	<title>Meha's Hypnotherapy</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
 
 	<!-- Responsive Grid System (for equal columns) -->
 	<!-- Example:
@@ -29,35 +31,26 @@
 <body>
 	
 	<div class="content">
-		<h2>Create an Account</h2>
+		<h2 style="text-align: center;">Create an Account</h2>
 
 		<div id="form">
-			<form>
+			<form method="post">
+				<label>Email</label>
+				<input type="text" name="email" id="email">
 
-				<div class="row">
-					<div class="col-12">
-						<label>E-Mail</label>
-						<input type="text" name="email">
-					</div>
-				</div>
+				<label>Username</label>
+				<input type="text" name="user" id="user">
+
+				<label>Password</label>
+				<input type="password" name="pass" id="pass">
+
+				<label>Re-enter Password</label>
+				<input type="password" name="repass" id="repass">
 				
-				<div class="row">
-					<div class="col-12">
-						<label>Username</label>
-						<input type="text" name="user">
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-12">
-						<label>Password</label>
-						<input type="password" name="pass">
-					</div>
-				</div>
-
-				<input type="submit" value="Submit">
-
+				<input type="button" onclick="createAccount()" value="Create account">
 			</form>
+			
+		</div>
 	</div>
 
 </body>

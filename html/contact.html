@@ -29,22 +29,41 @@
 <body>
 	<div id="banner">
 		
-		<div class="section group" id="nav">
-			<div class="col span_1_of_7"><a href="/">Home</a></div>
-			<div class="col span_1_of_7"><a href="">About</a></div>
-			<div class="col span_1_of_7"><a href="/services">Services</a></div>
-			<div class="col span_1_of_7"><a href="">Products</a></div>
-			<div class="col span_1_of_7"><a href="/rates">Rates</a></div>
-			<div class="col span_1_of_7 active"><a href="/contact">Contact</a></div>
-			<div class="col span_1_of_7"><a href="">Schedule</a></div>
+		<div id="navContainer">
+			<!-- logo here -->
+			<div id="logo">
+				<img src="https://via.placeholder.com/50x50.jpg">
+			</div>
+			<!-- bars here -->
+			<div id="bars">
+				<div id="bar-1"></div>
+				<div id="bar-2"></div>
+				<div id="bar-3"></div>
+			</div>
+
+			<!-- nav items -->
+			<div class="section group" id="nav">
+				<div class="col span_1_of_7"><a href="/">Home</a></div>
+				<div class="col span_1_of_7"><a href="/about">About</a></div>
+				<div class="col span_1_of_7"><a href="/services">Services &#9660;</a></div>
+				<div id="subNav">
+					<div><a href="/services/hypnosis">Hypnosis</a></div>
+					<div><a href="/services/health">Health Coaching</a></div>
+					<div><a href="/services/quantum">Quantum Hypnosis</a></div>
+				</div>
+				<div class="col span_1_of_7"><a href="/events">Events</a></div>
+				<div class="col span_1_of_7"><a href="/schedule">Schedule</a></div>
+				<div class="col span_1_of_7 active"><a href="/contact">Contact</a></div>
+				<div class="col span_1_of_7"><a href="/login">Login</a></div>
+			</div>
 		</div>
 
 		<div id="hero">
 			<div id="hero-text">
 				<h2>Meha's Hypnotherapy</h2>
 				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-				<button>About Hypnotherapy</button>
-				<button>Schedule Appointment</button>
+				<a href="/about"><button>About Hypnotherapy</button>
+				<a href="/schedule"><button>Schedule Appointment</button>
 			</div>
 			<!-- <img src="../img/hero.jpg" alt="sunset by Dingzeyu Li"> -->
 			<!-- img 1: https://unsplash.com/photos/ie8WW5KUx3o -->
@@ -56,5 +75,28 @@
 		<h2>Contact Meha</h2>
 	</div>
 
+
+
+	<div id="footer">
+		<div class="row">
+			<div class="col-8">
+				<em><h4 style="border-bottom: 2px solid">Contact:</h4></em>
+				<h5>[phone#]</h5>
+				<h5>[email]</h5>
+				<h5>[hours]</h5>
+			</div>
+
+			<div class="col-4">
+				<img src="../img/map.jpg" width="300px" height="auto" style="margin-top: 25px; border: solid 1px; display: block; margin: auto;">
+			</div>
+		</div>
+
+		<div>
+			&#169; 2018 | Credits: Web Dev Bred	
+		</div>
+	</div>
+
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="../js/func.js"></script>
 </body>
 </html>
