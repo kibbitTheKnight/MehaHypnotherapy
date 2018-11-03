@@ -150,14 +150,14 @@ app.get('/login', function (req, res) {
 	}
 });
 
-app.post('/logout', function(req, response)
+app.post('/logout', function(req, res)
 {
 	
 });
 
-app.post('/getState', function(req, response)
+app.post('/getstate', function(req, res)
 {
-	
+	res.send(req.session);
 });
 
 app.post('/login', function (req, response) 

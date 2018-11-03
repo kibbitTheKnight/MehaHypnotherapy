@@ -24,20 +24,28 @@ function login()
      console.log(JSON.stringify(userdata));
      $.post(url_login, userdata, function (res, status) {
 		//id = res;
+		
+		console.log("Changing login button");
+		window.location.replace('/dashboard');
+     }).fail(function () {
+          alert("Incorrect username or password");
+     });
+}
+
+window.addEventListener("load", function load(event){
+	
+	$.post('/getstate', function(res, status)
+	{
+		//get username and logged in status
 		userInfo.username = res.username;
 		userInfo.loggedin = res.loggedin;
 		
 		console.log("User username" + userInfo.username);
 		console.log("User log in" + userInfo.loggedin);
-		
-		console.log("Changing login button");
-		//window.location.replace('/dashboard');
-     }).fail(function () {
-          alert("Incorrect username or password");
-     })
-}
-
-window.addEventListener("load", function load(event){
+	}).fail(function()
+	{
+		alert("Something went wrong??");
+	});
 },false);
 
 function createAccount()
