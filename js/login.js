@@ -27,8 +27,8 @@ function login()
 		userInfo.username = res.username;
 		userInfo.loggedin = res.loggedin;
 		
-		console.log(userInfo.username);
-		console.log(userInfo.loggedin);
+		console.log("User username" + userInfo.username);
+		console.log("User log in" + userInfo.loggedin);
 		
 		console.log("Changing login button");
 		window.location.replace('/dashboard');
