@@ -39,6 +39,12 @@ document.getElementById("bars").onclick = function() {
 	} 
 }
 
+let userInfo =
+{
+	username: "",
+	loggedin: false
+}
+
 window.addEventListener("load", function load(event){
 	
 	$.post('/getstate', function(res, status)
