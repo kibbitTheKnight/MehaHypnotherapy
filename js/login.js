@@ -1,11 +1,5 @@
 const urlBase = 'https://mehahypnotherapy.herokuapp.com'
 
-let userInfo =
-{
-	username: "",
-	loggedin: false
-}
-
 function login()
 {
      var url_login = 'https://mehahypnotherapy.herokuapp.com/login';
@@ -32,21 +26,7 @@ function login()
      });
 }
 
-window.addEventListener("load", function load(event){
-	
-	$.post('/getstate', function(res, status)
-	{
-		//get username and logged in status
-		userInfo.username = res.username;
-		userInfo.loggedin = res.loggedin;
-		
-		console.log("User username" + userInfo.username);
-		console.log("User log in" + userInfo.loggedin);
-	}).fail(function()
-	{
-		alert("Something went wrong??");
-	});
-},false);
+
 
 function createAccount()
 {
