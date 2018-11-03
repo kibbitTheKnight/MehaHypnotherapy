@@ -31,7 +31,7 @@ function login()
 		console.log("User log in" + userInfo.loggedin);
 		
 		console.log("Changing login button");
-		window.location.replace('/dashboard');
+		//window.location.replace('/dashboard');
      }).fail(function () {
           alert("Incorrect username or password");
      })
