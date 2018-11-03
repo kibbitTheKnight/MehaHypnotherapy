@@ -35,41 +35,22 @@
 
 		<div id="form">
 			<form method="post">
-				<div class="row">
-					<div class="col span_1_of_4">
-						<label>Email</label>
-						<input type="text" id = "email" name="email">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col span_1_of_4">
-						<label>Username</label>
-						<input type="text" id = "user" name="user">
-					</div>
-				</div>
+				<label>Email</label>
+				<input type="text" name="email" id="email">
+
+				<label>Username</label>
+				<input type="text" name="user" id="user">
+
+				<label>Password</label>
+				<input type="password" name="pass" id="pass">
+
+				<label>Re-enter Password</label>
+				<input type="password" name="repass" id="repass">
 				
-				<div class="row">
-					<div class="col span_1_of_4">
-						<label>Password</label>
-						<input type="password" id = "pass" name="pass">
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col span_1_of_4">
-						<label>Re-enter Password</label>
-						<input type="password" id = "repass" name="repass">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col span_1_of_4">
-						<input type="button" onclick = "createAccount();" value="Submit">
-					</div>
-				</div>
-
-				
-
+				<input type="button" onclick="createAccount()" value="Create account">
 			</form>
+			
+		</div>
 	</div>
 
 </body>
