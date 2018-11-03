@@ -38,7 +38,6 @@ function login()
 }
 
 window.addEventListener("load", function load(event){
-	$.post(
 },false);
 
 function createAccount()
