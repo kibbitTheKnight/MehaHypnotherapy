@@ -53,8 +53,11 @@ window.addEventListener("load", function load(event){
 		userInfo.username = res.username;
 		userInfo.loggedin = res.loggedin;
 		
-		console.log("User username" + userInfo.username);
-		console.log("User log in" + userInfo.loggedin);
+		//turn log in to log out if logged in
+		if(userInfo.loggedin)
+		{
+			$("#loginbutton").text("Log out");
+		}
 	}).fail(function()
 	{
 		alert("Something went wrong??");
