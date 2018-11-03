@@ -38,3 +38,19 @@ document.getElementById("bars").onclick = function() {
 		document.getElementById("subNav").style.display = "none";
 	} 
 }
+
+window.addEventListener("load", function load(event){
+	
+	$.post('/getstate', function(res, status)
+	{
+		//get username and logged in status
+		userInfo.username = res.username;
+		userInfo.loggedin = res.loggedin;
+		
+		console.log("User username" + userInfo.username);
+		console.log("User log in" + userInfo.loggedin);
+	}).fail(function()
+	{
+		alert("Something went wrong??");
+	});
+},false);
