@@ -56,7 +56,12 @@ window.addEventListener("load", function load(event){
 		//turn log in to log out if logged in
 		if(userInfo.loggedin)
 		{
-			$("#loginbutton").text("Log out");
+			//$("#loginbutton").text("Log out");
+			$("#loginbutton").hide();
+		}
+		else
+		{
+			$("#logoutbutton").hide();
 		}
 	}).fail(function()
 	{

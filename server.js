@@ -152,7 +152,9 @@ app.get('/login', function (req, res) {
 
 app.post('/logout', function(req, res)
 {
-	
+	req.session.loggedin = false;
+	req.session.username = "";
+	res.redirect("/login");
 });
 
 app.post('/getstate', function(req, res)
