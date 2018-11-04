@@ -4,13 +4,13 @@ $(document).ready(function() {
 	// get navigation / banner and footer content
 	// nav & banner
 	var banner = $('#banner');
-	$.get('/html/banner.html', function(content) {
+	$.get('../html/banner.html', function(content) {
 		banner.html(content);
 	})
 
 	// footer
 	var footer = $('#footer');	
-	$.get('/html/footer.html', function(content) {
+	$.get('../html/footer.html', function(content) {
 		footer.html(content);
 	})	
 })
