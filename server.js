@@ -139,7 +139,12 @@ app.get('/services/health', function (req, res) {
 app.get('/services/quantum', function (req, res) {
         res.sendFile(__dirname + '/html/services/quantum.html');
 });
-
+app.get('/banner', function (req, res) {
+        res.sendFile(__dirname + '/html/banner.html');
+});
+app.get('/footer', function (req, res) {
+        res.sendFile(__dirname + '/html/footer.html');
+});
 
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {
