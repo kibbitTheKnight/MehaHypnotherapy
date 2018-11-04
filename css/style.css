@@ -193,7 +193,7 @@ input[type=button] {
 	padding: 5px;
 }
 
-#footer div, #footer h4, #footer h5 {
+#footer div, #footer h4, #footer h5{
 	color: white;
 }
 
@@ -210,4 +210,13 @@ input[type=button] {
 iframe {
 	width: 100%;
 	height: 100%;
+}
+
+/* used for Meha's About image */
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
