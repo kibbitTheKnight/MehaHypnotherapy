@@ -40,10 +40,24 @@ window.addEventListener("load", function load(event){
 		// alert("Something went wrong??");
 	});
 
+	let userInfo =
+	{
+		username: "",
+		loggedin: false
+	}
 
+	function logout()
+	{
+		$.post("/logout", function (res, status) {
+		  window.location.replace('/login');
+	     }).fail(function () {
+	          alert("Something went wrong??");
+	     })
+	}
+});
 
-
-
+document.getElementById("bars").onload = function()
+{
 	// navigation functionality
 	document.getElementById("bars").onclick = function() {
 
@@ -84,28 +98,4 @@ window.addEventListener("load", function load(event){
 			document.getElementById("subNav").style.display = "none";
 		} 
 	}
-
-	let userInfo =
-	{
-		username: "",
-		loggedin: false
-	}
-
-	function logout()
-	{
-		$.post("/logout", function (res, status) {
-		  window.location.replace('/login');
-	     }).fail(function () {
-	          alert("Something went wrong??");
-	     })
-	}
-
-
-
-
-
-});
-
-
-
-
+}
