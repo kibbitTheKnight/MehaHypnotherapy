@@ -1,58 +1,19 @@
-// navigation functionality
-document.getElementById("bars").onclick = function() {
-
-	// show / hide the nav menu when the dashes / X is clicked on
-	var navContainer = document.getElementById("navContainer");
-	navContainer.classList.toggle("change");
+$(document).ready(function() {
+	// THESE 'GET CONTENT' FUNCTIONS HAVE TO BE IN DOC.READY AS IT FIRES BEFORE CONTENT IS LOADED
 	
-	// nav container dropdown
-	var nav = document.getElementById("nav");
-	if (nav.style.display == "block") {
-		// hide navbar
-		nav.style.display = "none";
-		navContainer.style.backgroundColor = "transparent";
-	}
-	else {
-		// show navbar
-		nav.style.display = "block";
-		navContainer.style.backgroundColor = "#FCFBE3";
-	}
+	// get navigation / banner and footer content
+	// nav & banner
+	var banner = $('#banner');
+	$.get('banner.html', function(content) {
+		banner.html(content);
+	})
 
-	// get coordinates for "Services" nav element and set postion of "subNav"
-	var rect = nav.children[2].getBoundingClientRect();
-	var subNav = document.getElementById("subNav");
-	subNav.style.left = rect.left + "px";
-	subNav.style.top = (rect.height + rect.top) + "px";
-
-	// services dropdown (both for services and the subNav)
-	nav.children[2].onmouseenter = function() {
-		document.getElementById("subNav").style.display = "block";
-	}
-	nav.children[2].onmouseleave = function() {
-		document.getElementById("subNav").style.display = "none";
-	}
-	subNav.onmouseenter = function() {
-		document.getElementById("subNav").style.display = "block";
-	}
-	subNav.onmouseleave = function() {
-		document.getElementById("subNav").style.display = "none";
-	} 
-}
-
-let userInfo =
-{
-	username: "",
-	loggedin: false
-}
-
-function logout()
-{
-	$.post("/logout", function (res, status) {
-	  window.location.replace('/login');
-     }).fail(function () {
-          alert("Something went wrong??");
-     })
-}
+	// footer
+	var footer = $('#footer');	
+	$.get('footer.html', function(content) {
+		footer.html(content);
+	})	
+})
 
 window.addEventListener("load", function load(event){
 	
@@ -76,6 +37,75 @@ window.addEventListener("load", function load(event){
 		}
 	}).fail(function()
 	{
-		alert("Something went wrong??");
+		// alert("Something went wrong??");
 	});
-},false);
+
+
+
+
+
+	// navigation functionality
+	document.getElementById("bars").onclick = function() {
+
+		// show / hide the nav menu when the dashes / X is clicked on
+		var navContainer = document.getElementById("navContainer");
+		navContainer.classList.toggle("change");
+		
+		// nav container dropdown
+		var nav = document.getElementById("nav");
+		if (nav.style.display == "block") {
+			// hide navbar
+			nav.style.display = "none";
+			navContainer.style.backgroundColor = "transparent";
+		}
+		else {
+			// show navbar
+			nav.style.display = "block";
+			navContainer.style.backgroundColor = "#FCFBE3";
+		}
+
+		// get coordinates for "Services" nav element and set postion of "subNav"
+		var rect = nav.children[2].getBoundingClientRect();
+		var subNav = document.getElementById("subNav");
+		subNav.style.left = rect.left + "px";
+		subNav.style.top = (rect.height + rect.top) + "px";
+
+		// services dropdown (both for services and the subNav)
+		nav.children[2].onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		nav.children[2].onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
+		subNav.onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		subNav.onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		} 
+	}
+
+	let userInfo =
+	{
+		username: "",
+		loggedin: false
+	}
+
+	function logout()
+	{
+		$.post("/logout", function (res, status) {
+		  window.location.replace('/login');
+	     }).fail(function () {
+	          alert("Something went wrong??");
+	     })
+	}
+
+
+
+
+
+});
+
+
+
+
