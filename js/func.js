@@ -33,7 +33,7 @@ window.addEventListener("load", function load(event){
 		else
 		{
 			$("#logoutbutton").hide();
-			$("loginbutton").show();
+			$("#loginbutton").show();
 		}
 	}).fail(function()
 	{
@@ -56,7 +56,7 @@ window.addEventListener("load", function load(event){
 	}
 });
 
-window.onload = function()
+function navClick()
 {
 	// navigation functionality
 	document.getElementById("bars").onclick = function() {
