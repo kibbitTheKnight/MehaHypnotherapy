@@ -220,3 +220,13 @@ iframe {
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
 }
+
+a[href^="mailto:"]
+{
+	color: white;
+}
+
+img {
+	margin-right: 10px;
+	position: relative;
+}
