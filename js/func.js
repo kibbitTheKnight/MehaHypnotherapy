@@ -56,7 +56,7 @@ window.addEventListener("load", function load(event){
 	}
 });
 
-document.getElementById("bars").onload = function()
+document.onload = function()
 {
 	// navigation functionality
 	document.getElementById("bars").onclick = function() {
