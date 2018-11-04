@@ -68,11 +68,13 @@ window.addEventListener("load", function load(event){
 			//$("#loginbutton").text("Log out");
 			$("#loginbutton").hide();
 			$("#logoutbutton").show();
+			$("#loggedin").show();
 		}
 		else
 		{
 			$("#logoutbutton").hide();
 			$("loginbutton").show();
+			$("#loggedin").hide();
 		}
 	}).fail(function()
 	{
