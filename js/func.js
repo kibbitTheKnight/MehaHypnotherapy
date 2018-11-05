@@ -12,10 +12,14 @@ $(document).ready(function() {
 	var footer = $('#footer');	
 	$.get('../html/footer.html', function(content) {
 		footer.html(content);
-	})	
+	})
+
+	$(footer).ready(function() {
+		console.log("footer fired!");
+	})
 })
 
-window.addEventListener("load", function load(event){
+window.onload(function(){
 	
 	$.post('/getstate', function(res, status)
 	{
