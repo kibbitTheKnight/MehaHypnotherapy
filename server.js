@@ -234,7 +234,7 @@ app.post('/createAccount', function (req, res) {
 				if(res2.rowCount > 0)
 				{
 					res.status(401).send("username");
-					res.end;
+					res.end();
 				}
 			}
 		});
