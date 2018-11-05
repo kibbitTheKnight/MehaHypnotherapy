@@ -236,7 +236,7 @@ app.post('/createAccount', function (req, res) {
 					res.status(401).send();
 				}
 			}
-		}
+		});
 	if (checkInput(req.body)) {
 		res.status(400).send();
 	} else {
