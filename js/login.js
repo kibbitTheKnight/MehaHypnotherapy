@@ -50,12 +50,15 @@ function createAccount()
 	 
      $.post("/createAccount", userdata, function (res, status) {
           console.log(status);
-		  if(status == 69)
-		  {
-			  alert("Username is already taken");
-		  }
      }).fail(function() {
-          alert("signup failed");
+			if(status == 69)
+			{
+				alert("Username is already taken");
+			}
+			else
+			{
+				alert("signup failed");
+			}
      });
 	 window.location.href="https://mehahypnotherapy.herokuapp.com/login"
 }
