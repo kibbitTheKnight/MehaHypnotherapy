@@ -52,7 +52,7 @@ function createAccount()
           console.log(status);
      }).fail(function() {
 		 console.log(res);
-			if(res == "username")
+			if(status != 200)
 			{
 				alert("Username is already taken");
 			}
@@ -61,5 +61,5 @@ function createAccount()
 				alert("signup failed");
 			}
      });
-	 window.location.href="https://mehahypnotherapy.herokuapp.com/login"
+	 //window.location.href="https://mehahypnotherapy.herokuapp.com/login"
 }
