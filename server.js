@@ -206,13 +206,11 @@ app.post('/login', function (req, response)
 						}
 					});
 				} else {
-					console.log("3");
 					response.status(401).send();
 				}
 			} 
 			else
 			{
-				console.log("2");
 				console.log(err);
 			}
 		});
@@ -228,6 +226,17 @@ app.get('/logout', function (req, res) {
 */
 app.post('/createAccount', function (req, res) {
 	console.log("receiving signup info:");
+	let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
+		 client.query(query, (err, res) => 
+		{
+			if(!err)
+			{
+				if(res.rowCount > 0)
+				{
+					res.status(401).send();
+				}
+			}
+		}
 	if (checkInput(req.body)) {
 		res.status(400).send();
 	} else {
