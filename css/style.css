@@ -10,6 +10,11 @@ html, body {
 	width: 100%;
 }
 
+#hero-text
+{
+	color: white;
+}
+
 #navContainer {
     position: absolute;
     top: 0px;
@@ -106,6 +111,16 @@ html, body {
 
 #hero-text h2 {
 	margin-top: 0;
+	color: white;
+}
+
+#hero-text h3 {
+	margin-top: 0;
+	color: white;
+}
+
+#loggedin {
+	color: white;
 }
 
 button {
