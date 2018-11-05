@@ -51,6 +51,7 @@ function createAccount()
      $.post("/createAccount", userdata, function (res, status) {
 			console.log(status);
 			console.log(res);
+			window.location.href="https://mehahypnotherapy.herokuapp.com/login"
      }).fail(function() {
 			console.log(status);
 			if(status != 200)
@@ -62,5 +63,4 @@ function createAccount()
 				alert("signup failed");
 			}
      });
-	 //window.location.href="https://mehahypnotherapy.herokuapp.com/login"
 }
