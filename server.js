@@ -227,7 +227,7 @@ app.get('/logout', function (req, res) {
 app.post('/createAccount', function (req, res) {
 	console.log("receiving signup info:");
 	let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
-		 client.query(query, (err, res) => 
+		 client.query(query, (err, res2) => 
 		{
 			if(!err)
 			{
