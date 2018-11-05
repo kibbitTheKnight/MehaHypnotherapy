@@ -231,7 +231,7 @@ app.post('/createAccount', function (req, res) {
 		{
 			if(!err)
 			{
-				if(res.rowCount > 0)
+				if(res2.rowCount > 0)
 				{
 					res.status(69).send();
 				}
