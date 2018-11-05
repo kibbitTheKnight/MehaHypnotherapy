@@ -233,7 +233,7 @@ app.post('/createAccount', function (req, res) {
 			{
 				if(res.rowCount > 0)
 				{
-					res.status(401).send();
+					res.status(69).send();
 				}
 			}
 		});
