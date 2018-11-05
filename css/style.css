@@ -38,8 +38,9 @@ html, body {
 #bar-1, #bar-2, #bar-3 {
 	width: 30px;
 	height: 5px;
-	background-color: #333;
+	background-color: white;
 	margin: 6px 0;
+	border-radius: 2px;
 	/* animation time */
 	transition: 0.4s;
 }
@@ -48,6 +49,7 @@ html, body {
 .change div #bar-1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: black;
 }
 
 .change div #bar-2 {opacity: 0;}
