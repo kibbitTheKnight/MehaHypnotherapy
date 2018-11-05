@@ -49,9 +49,10 @@ function createAccount()
      }
 	 
      $.post("/createAccount", userdata, function (res, status) {
-          console.log(status);
+			console.log(status);
+			console.log(res);
      }).fail(function() {
-		 console.log(res);
+			console.log(status);
 			if(status != 200)
 			{
 				alert("Username is already taken");
