@@ -52,11 +52,15 @@ html, body {
     background-color: black;
 }
 
-.change div #bar-2 {opacity: 0;}
+.change div #bar-2 {
+	opacity: 0;
+	background-color: black;
+}
 
 .change div #bar-3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    background-color: black;
 }
 
 /* ^^^^^ bar animation ^^^^^ */
