@@ -106,24 +106,37 @@ html, body {
 }
 
 #hero {
-	background-image: url('../img/energy 3.jpg');
-	height: 100%;
-	top: 90px;
+	background-image: url('../img/flowers.jpg');
+	height: 110%;
+	top: 110px;
+	bottom: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding: 50px;
+	padding: 100px;
 }
 
 #hero-text h2 {
+	font-size: 90px;
+	font: Raleway;
+	text-align: center;
+	
 	margin-top: 0;
-	color: white;
+	color: #8B0000;
 }
 
 #hero-text h3 {
-	margin-top: 0;
-	color: white;
+	position:relative;
+	 text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+	 border-opacity:0.7;
+	 /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); */
+	 left: -10px;
+	font-size: 40px;
+	text-align: center;
+	top: -50px;
+	margin-top: 100px;
+	color: #8B0000
 }
 
 #loggedin {
