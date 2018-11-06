@@ -30,8 +30,58 @@
 </head>
 
 <body>
-	<!-- banner loads here -->
-	<div id="banner"></div>
+	<div id="banner">
+		
+		<div id="navContainer">
+			<!-- logo here -->
+			<div id="logo">
+				<img src="https://via.placeholder.com/50x50.jpg">
+			</div>
+			<!-- displayed if logged in-->
+			<div id = "loggedin">
+				Logged in!
+			</div>
+			<!-- bars here -->
+		<!--	<div id="bars">
+				<div id="bar-1"></div>
+				<div id="bar-2"></div>
+				<div id="bar-3"></div>
+			</div> --!>
+
+			<!-- nav items -->
+			<br>
+			<div <!--class="section group" -->
+			<div class="col span_1_of_11"></div>
+			
+				<div class="col span_1_of_11 active"><a href="/">Home</a></div>
+				<div class="col span_1_of_11"><a href="/about">About</a></div>
+				<div class="col span_1_of_11"><a href="/services">Services &#9660;</a></div>
+				<div id="subNav">
+					<div><a href="/services/hypnosis">Hypnosis</a></div>
+					<div><a href="/services/health">Health Coaching</a></div>
+					<div><a href="/services/quantum">Quantum Hypnosis</a></div>
+          			<div><a href="/services/energy">Energy Work</a></div>
+				</div>
+				<div class="col span_1_of_11"><a href="/events">Events</a></div>
+				<div class="col span_1_of_11"><a href="/schedule">Schedule</a></div>
+				<div class="col span_1_of_11"><a href="/contact">Contact</a></div>
+				<div class="col span_1_of_11"><a href="/login" id = "loginbutton">Login</a></div>
+				<div class="col span_1_of_11"><a onclick = "logout()" id = "logoutbutton">Log Out</a></div>
+				<div class="col span_1_of_11"></div>
+			</div>
+		</div>
+
+		<div id="hero">
+			<div id="hero-text">
+				<h2>Meha McFadden</h2>
+				<h3>Health Coaching and Hypnotherapy</h3>
+				<a href="/schedule"><button>Book a session now!</button></a>
+			</div>
+			<!-- <img src="../img/hero.jpg" alt="sunset by Dingzeyu Li"> -->
+			<!-- img 1: https://unsplash.com/photos/ie8WW5KUx3o -->
+			<!-- img 2: https://unsplash.com/photos/hbRipyKueC8 -->
+		</div>
+	</div>
 
 	<div class="content">
 		<div class="row">
@@ -46,11 +96,11 @@
 
 			<div class="col-4">
 
-				<!-- some stock photo here?
-				<img src="https://via.placeholder.com/300x500.jpg" style="display: block;margin: auto;">
+				<!-- some stock photo here? -->
+				<!--<img src="../img/mapPlaceholder.jpg" width = "300" height = "325" style="display: block;margin: auto;">
 
 
-				<div class="row">
+				 <div class="row">
 					<div class="col-12">
 						<div style="margin-top: 30px">
 						    <form action="">
@@ -89,7 +139,7 @@
 				<h3>Energy Work</h3>
 				<p>Using different modalities in assisting and aligning the flow of energy in the physical body and the energetic body to bring it back to balance..</p>
 				<a href="/services/energy"><button>Read more</button></a>
-			</div>
+			</div>			
 		</div>
 
 
@@ -109,14 +159,31 @@
 				~Amberr</blockquote>
 			</div>
 			<div class="col-3">
-				<blockquote>Changing my diet has opened my third eye!<br>
-				~Dakota</blockquote>
+				<blockquote>Testimonial testimonial testimonial testimonial<br>
+				~Amberr</blockquote>
 			</div>
 		</div>
+		<h6>Meha McFadden is a certified Clinical Hypnotherapist and Health Coach. Meha doesn't diagnose, treat, or prescribe for any condition and is not a licensed medical practitioner. Hypnotherapy and Coaching is not a substitute for medical or psychological treatment.<br> If on pain management for medical condition, Meha will need a referral paper from your doctor.</h6>
 	</div>
 
-	<!-- footer loads here -->
-	<div id="footer"></div>
+	<div id="footer">
+		<div class="row">
+			<div class="col-8">
+				<em><h4 style="border-bottom: 2px solid">Contact:</h4></em>
+				<h5>tel: (407) 595-5960</h5>
+				<h5>mail: <a href="mailto:mehahypnotherapy@gmail.com">mehahypnotherapy@gmail.com</a></h5>
+				<h5>[hours]</h5>
+			</div>
+
+			<div class="col-4">
+				<img src="../img/map.jpg" width="300px" height="auto" style="margin-top: 25px; border: solid 1px; display: block; margin: auto;">
+			</div>
+		</div>
+
+		<div>
+			&#169; 2018 | Credits: Web Dev Bred	
+		</div>
+	</div>
 
 	<!-- Custom JavaScript -->
 	<script type="text/javascript" src="../js/func.js"></script>
