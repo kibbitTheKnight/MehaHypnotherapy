@@ -114,29 +114,36 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding: 100px;
+	padding: 30px;
 }
 
 #hero-text h2 {
 	font-size: 90px;
-	font: Raleway;
+	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;*/
+	font-family: Raleway;
+	font-variant: normal;
 	text-align: center;
+	font-weight: 80;
 	
 	margin-top: 0;
-	color: #8B0000;
+	color: #8E3D40;
 }
 
 #hero-text h3 {
+	font-family: Raleway;
+	font-variant: normal;
+	text-align: center;
+	font-weight: 80;
 	position:relative;
-	 text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+	/* text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;*/
 	 border-opacity:0.7;
 	 /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); */
 	 left: -10px;
 	font-size: 40px;
 	text-align: center;
-	top: -50px;
+	top: -70px;
 	margin-top: 100px;
-	color: #8B0000
+	color: #8E3D40;
 }
 
 #loggedin {
@@ -145,6 +152,13 @@ html, body {
 
 button {
 	background-color: #8E3D40;
+	opacity: .80;
+	margin: 0;
+	width: 220px;
+	height: 68px;
+	
+	margin-left: 45%;
+	margin-right: 45%;
 	/* burgundy */
 	color: white;
 	padding: 10px; 
