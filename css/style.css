@@ -78,31 +78,45 @@ html, body {
 }
 
 #nav a {
-	display: block;
 	text-decoration: none;
-	padding: 20px;
+	display: block;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	background-color: white;
+	color:white;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
 }
 
 #nav a:hover {
-	background-color: #8E3D40;
+	text-decoration: none;
+	text-align: center;
+	background-color: #B97F6D;
+	opacity: .6;
 	/* burgundy */
 	color: white;
 }
-
+#nav a:hover:not(.active){
+	text-decoration: none;
+}
 #subNav {
-	background-color: #FCFBE3;
+	text-decoration: none;
+	text-align: center;
+	background-color: #B97F6D;
+	opacity: .6;
 	/* vanilla cream */
 	position: absolute;
 	display: none;
 }
 
-.active {
-	background-color: #8E3D40;
-	/* burgundy */
-}
 
 .active a {
-	color: white;
+	text-decoration: none;
+	background-color: #B97F6D;
+	color:white;
+	padding: 10px;
 }
 
 #hero {
@@ -158,7 +172,7 @@ button {
 	margin: 0;
 	width: 220px;
 	height: 68px;
-	
+	top: 300px;
 	margin-left: 40%;
 	margin-right: 40%;
 	/* burgundy */
