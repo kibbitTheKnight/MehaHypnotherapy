@@ -150,6 +150,18 @@ app.get('/login', function (req, res) {
 	}
 });
 
+app.post('/logout', function(req, res)
+{
+	req.session.loggedin = false;
+	req.session.username = "";
+	res.redirect("/login");
+});
+
+app.post('/getstate', function(req, res)
+{
+	res.send(req.session);
+});
+
 app.post('/login', function (req, response) 
 {
 	//var loginLink = $("#loginbutton");
@@ -177,12 +189,10 @@ app.post('/login', function (req, response)
 							if (same) 
 							{
 								req.session.loggedin = true;
-								req.session.userid = res.rows[0].id;
+								req.session.username = res.rows[0].username;
 								console.log("redirecting to home");
 								response.set('Access-Control-Allow-Origin','*');
-								response.status(200).send();
-								// loginLink.innerHTML = "<a href=\"/login\" id = \"loginbutton\">Log Out</a>";
-								//$("#loginLink").html("Log Out");
+								response.status(200).send(req.session);
 								return;
 							} 
 							else 
@@ -196,13 +206,11 @@ app.post('/login', function (req, response)
 						}
 					});
 				} else {
-					console.log("3");
 					response.status(401).send();
 				}
 			} 
 			else
 			{
-				console.log("2");
 				console.log(err);
 			}
 		});
@@ -217,7 +225,25 @@ app.get('/logout', function (req, res) {
 })
 */
 app.post('/createAccount', function (req, res) {
+	var nameTaken = false;
 	console.log("receiving signup info:");
+	let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
+		 client.query(query, (err, res2) => 
+		{
+			if(!err)
+			{
+				if(res2.rowCount > 0)
+				{
+					nameTaken = true;
+					res.status(401).send("username");
+					res.end();
+				}
+			}
+		});
+	if(nameTaken)
+	{
+		return;
+	}
 	if (checkInput(req.body)) {
 		res.status(400).send();
 	} else {

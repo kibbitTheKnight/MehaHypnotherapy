@@ -10,6 +10,11 @@ html, body {
 	width: 100%;
 }
 
+#hero-text
+{
+	color: white;
+}
+
 #navContainer {
     position: absolute;
     top: 0px;
@@ -33,8 +38,9 @@ html, body {
 #bar-1, #bar-2, #bar-3 {
 	width: 30px;
 	height: 5px;
-	background-color: #333;
+	background-color: white;
 	margin: 6px 0;
+	border-radius: 2px;
 	/* animation time */
 	transition: 0.4s;
 }
@@ -43,13 +49,18 @@ html, body {
 .change div #bar-1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: black;
 }
 
-.change div #bar-2 {opacity: 0;}
+.change div #bar-2 {
+	opacity: 0;
+	background-color: black;
+}
 
 .change div #bar-3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    background-color: black;
 }
 
 /* ^^^^^ bar animation ^^^^^ */
@@ -95,7 +106,7 @@ html, body {
 }
 
 #hero {
-	background-image: url('../img/hero.jpg');
+	background-image: url('../img/energy 3.jpg');
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -106,6 +117,16 @@ html, body {
 
 #hero-text h2 {
 	margin-top: 0;
+	color: white;
+}
+
+#hero-text h3 {
+	margin-top: 0;
+	color: white;
+}
+
+#loggedin {
+	color: white;
 }
 
 button {
@@ -193,7 +214,7 @@ input[type=button] {
 	padding: 5px;
 }
 
-#footer div, #footer h4, #footer h5 {
+#footer div, #footer h4, #footer h5{
 	color: white;
 }
 
@@ -210,4 +231,14 @@ input[type=button] {
 iframe {
 	width: 100%;
 	height: 100%;
+}
+
+a[href^="mailto:"]
+{
+	color: white;
+}
+
+img {
+	margin-right: 10px;
+	position: relative;
 }

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Meha's Hypnotherapy</title>
+	
+	<script type="text/javascript" src="../js/jquery.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,6 +39,10 @@
 			<div id="logo">
 				<img src="https://via.placeholder.com/50x50.jpg">
 			</div>
+			<!-- displayed if logged in-->
+			<div id = "loggedin">
+				Logged in!
+			</div>
 			<!-- bars here -->
 			<div id="bars">
 				<div id="bar-1"></div>
@@ -53,19 +59,21 @@
 					<div><a href="/services/hypnosis">Hypnosis</a></div>
 					<div><a href="/services/health">Health Coaching</a></div>
 					<div><a href="/services/quantum">Quantum Hypnosis</a></div>
+          			<div><a href="/services/energy">Energy Work</a></div>
 				</div>
 				<div class="col span_1_of_8"><a href="/events">Events</a></div>
 				<div class="col span_1_of_8"><a href="/schedule">Schedule</a></div>
 				<div class="col span_1_of_8"><a href="/contact">Contact</a></div>
-				<div class="col span_1_of_8"><a href="/login">Login</a></div>
+				<div class="col span_1_of_8"><a href="/login" id = "loginbutton">Login</a></div>
+				<div class="col span_1_of_8"><a onclick = "logout()" id = "logoutbutton">Log Out</a></div>
 				<div class="col span_1_of_8 active"><a href="/Dashboard">Dashboard</a></div>
 			</div>
 		</div>
 
 		<div id="hero">
 			<div id="hero-text">
-				<h2>Meha's Hypnotherapy</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+				<h2>Meha McFadden</h2>
+				<h3>Health Coaching and Hypnotherapy</h3>
 				<a href="/about"><button>About Hypnotherapy</button></a>
 				<a href="/schedule"><button>Schedule Appointment</button></a>
 			</div>
@@ -103,6 +111,7 @@
 			<h3>Information</h3>
 			Here is where personalized information would go.
 		</div>
+		<h6>Meha McFadden is a certified Clinical Hypnotherapist and Health Coach. Meha doesn't diagnose, treat, or prescribe for any condition and is not a licensed medical practitioner. Hypnotherapy and Coaching is not a substitute for medical or psychological treatment.<br> If on pain management for medical condition, Meha will need a referral paper from your doctor.</h6>
 	</div>
 
 
@@ -111,8 +120,8 @@
 		<div class="row">
 			<div class="col-8">
 				<em><h4 style="border-bottom: 2px solid">Contact:</h4></em>
-				<h5>[phone#]</h5>
-				<h5>[email]</h5>
+				<h5>tel: (407) 595-5960</h5>
+				<h5>mail: <a href="mailto:mehahypnotherapy@gmail.com">mehahypnotherapy@gmail.com</a></h5>
 				<h5>[hours]</h5>
 			</div>
 

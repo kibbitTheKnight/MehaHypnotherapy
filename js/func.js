@@ -38,3 +38,46 @@ document.getElementById("bars").onclick = function() {
 		document.getElementById("subNav").style.display = "none";
 	} 
 }
+
+let userInfo =
+{
+	username: "",
+	loggedin: false
+}
+
+function logout()
+{
+	$.post("/logout", function (res, status) {
+	  window.location.replace('/login');
+     }).fail(function () {
+          alert("Something went wrong??");
+     })
+}
+
+window.addEventListener("load", function load(event){
+	
+	$.post('/getstate', function(res, status)
+	{
+		//get username and logged in status
+		userInfo.username = res.username;
+		userInfo.loggedin = res.loggedin;
+		
+		//turn log in to log out if logged in
+		if(userInfo.loggedin)
+		{
+			//$("#loginbutton").text("Log out");
+			$("#loginbutton").hide();
+			$("#logoutbutton").show();
+			$("#loggedin").show();
+		}
+		else
+		{
+			$("#logoutbutton").hide();
+			$("loginbutton").show();
+			$("#loggedin").hide();
+		}
+	}).fail(function()
+	{
+		alert("Something went wrong??");
+	});
+},false);
