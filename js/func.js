@@ -1,4 +1,5 @@
 // navigation functionality
+/*
 document.getElementById("bars").onclick = function() {
 
 	// show / hide the nav menu when the dashes / X is clicked on
@@ -38,6 +39,7 @@ document.getElementById("bars").onclick = function() {
 		document.getElementById("subNav").style.display = "none";
 	} 
 }
+*/
 
 let userInfo =
 {
