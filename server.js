@@ -140,7 +140,6 @@ app.get('/services/quantum', function (req, res) {
         res.sendFile(__dirname + '/html/services/quantum.html');
 });
 
-
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {
 		console.log("Serving login.html");
