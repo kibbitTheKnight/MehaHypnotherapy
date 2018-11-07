@@ -1,13 +1,18 @@
 html, body {
 /*	width: 100%;
 	height: 100%;*/
-	background-color: #FCFBE3;
+	background-color: FF0000;
 	/* vanilla cream */
 	color: black;
 }
 
 #banner {
 	width: 100%;
+}
+
+#hero-text
+{
+	color: white;
 }
 
 #navContainer {
@@ -33,8 +38,9 @@ html, body {
 #bar-1, #bar-2, #bar-3 {
 	width: 30px;
 	height: 5px;
-	background-color: #333;
+	background-color: white;
 	margin: 6px 0;
+	border-radius: 2px;
 	/* animation time */
 	transition: 0.4s;
 }
@@ -43,13 +49,18 @@ html, body {
 .change div #bar-1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: black;
 }
 
-.change div #bar-2 {opacity: 0;}
+.change div #bar-2 {
+	opacity: 0;
+	background-color: black;
+}
 
 .change div #bar-3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    background-color: black;
 }
 
 /* ^^^^^ bar animation ^^^^^ */
@@ -67,49 +78,108 @@ html, body {
 }
 
 #nav a {
-	display: block;
 	text-decoration: none;
-	padding: 20px;
+	display: block;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	background-color: white;
+	color:white;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	padding-right:20px;
+	padding-left: 20px;
+
 }
 
 #nav a:hover {
-	background-color: #8E3D40;
+	text-decoration: none;
+	text-align: center;
+	background-color: #B97F6D;
+	opacity: .6;
 	/* burgundy */
 	color: white;
 }
-
+#nav a:hover:not(.active){
+	text-decoration: none;
+}
 #subNav {
-	background-color: #FCFBE3;
+	text-decoration: none;
+	text-align: center;
+	background-color: #B97F6D;
+	opacity: .6;
 	/* vanilla cream */
 	position: absolute;
 	display: none;
 }
 
-.active {
-	background-color: #8E3D40;
-	/* burgundy */
-}
 
 .active a {
-	color: white;
+	text-decoration: none;
+	background-color: #B97F6D;
+	/*background-size: 20px 500px;*/
+	color:white;
+	padding: 15px;
 }
 
 #hero {
-	background-image: url('../img/hero.jpg');
-	height: 100%;
+	background-image: url('../img/flowers.jpg');
+	height: 110%;
+	top: 110px;
+	bottom: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding: 50px;
+	padding: 30px;
 }
 
 #hero-text h2 {
+	font-size: 90px;
+	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;*/
+	font-family: Raleway;
+	font-variant: normal;
+	text-align: center;
+	font-weight: 80;
+	
 	margin-top: 0;
+	color: #8E3D40;
 }
 
+#hero-text h3 {
+	font-family: Raleway;
+	font-variant: normal;
+	text-align: center;
+	font-weight: 80;
+	position:relative;
+	/* text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;*/
+	 border-opacity:0.7;
+	 /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); */
+	 left: -10px;
+	font-size: 40px;
+	text-align: center;
+	top: -70px;
+	margin-top: 100px;
+	color: #8E3D40;
+}
+
+#loggedin {
+	color: white;
+}
+/*button under title of homepage*/
 button {
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
 	background-color: #8E3D40;
+	opacity: .80;
+	margin: 0;
+	width: 220px;
+	height: 68px;
+	top: 300px;
+	margin-left: 40%;
+	margin-right: 40%;
 	/* burgundy */
 	color: white;
 	padding: 10px; 
@@ -212,11 +282,12 @@ iframe {
 	height: 100%;
 }
 
-/* used for Meha's About image */
-.rotate270 {
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
+a[href^="mailto:"]
+{
+	color: white;
+}
+
+img {
+	margin-right: 10px;
+	position: relative;
 }

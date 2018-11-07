@@ -205,13 +205,11 @@ app.post('/login', function (req, response)
 						}
 					});
 				} else {
-					console.log("3");
 					response.status(401).send();
 				}
 			} 
 			else
 			{
-				console.log("2");
 				console.log(err);
 			}
 		});
@@ -226,7 +224,25 @@ app.get('/logout', function (req, res) {
 })
 */
 app.post('/createAccount', function (req, res) {
+	var nameTaken = false;
 	console.log("receiving signup info:");
+	let query = 'SELECT * FROM users WHERE username=\'' + req.body.username +'\';';
+		 client.query(query, (err, res2) => 
+		{
+			if(!err)
+			{
+				if(res2.rowCount > 0)
+				{
+					nameTaken = true;
+					res.status(401).send("username");
+					res.end();
+				}
+			}
+		});
+	if(nameTaken)
+	{
+		return;
+	}
 	if (checkInput(req.body)) {
 		res.status(400).send();
 	} else {
