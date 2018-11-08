@@ -84,7 +84,38 @@ $(document).ready(function() {
 			nav.children[7].classList.add('active');
 			break;
 		}
-	})
+		
+		//determine whether logged in or out
+		$.post('/getstate', function(res, status)
+		{
+			//get username and logged in status
+			userInfo.username = res.username;
+			userInfo.loggedin = res.loggedin;
+			
+			console.log(userInfo.username);
+			console.log(userInfo.loggedin);
+			
+			console.log($("#logoutbutton").text());
+			console.log($("#loginbutton").text());
+			
+			//turn log in to log out if logged in
+			if(userInfo.loggedin)
+			{
+				$("#loginbutton").hide();
+				$("#logoutbutton").show();
+				$("#loggedin").show();
+			}
+			else
+			{
+				$("#logoutbutton").hide();
+				$("#loginbutton").show();
+				$("#loggedin").hide();
+			}
+			}).fail(function()
+			{
+				alert("Something went wrong??");
+			});
+		})
 
 	// footer
 	var footer = $('#footer');	
@@ -112,34 +143,5 @@ function logout()
 
 
 window.addEventListener("load", function load(event){
-		//determine whether logged in or out
-	$.post('/getstate', function(res, status)
-	{
-		//get username and logged in status
-		userInfo.username = res.username;
-		userInfo.loggedin = res.loggedin;
-		
-		console.log(userInfo.username);
-		console.log(userInfo.loggedin);
-		
-		console.log($("#logoutbutton").text());
-		console.log($("#loginbutton").text());
-		
-		//turn log in to log out if logged in
-		if(userInfo.loggedin)
-		{
-			$("#loginbutton").hide();
-			$("#logoutbutton").show();
-			$("#loggedin").show();
-		}
-		else
-		{
-			$("#logoutbutton").hide();
-			$("#loginbutton").show();
-			$("#loggedin").hide();
-		}
-	}).fail(function()
-	{
-		alert("Something went wrong??");
-	});
+
 },false);
