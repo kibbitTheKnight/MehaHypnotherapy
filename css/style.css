@@ -110,6 +110,7 @@ a {
 #subNav {
 	display: none;
 	position: absolute;
+	z-index: 3;
 	background-color: #B97F6D;
 	text-align: center;
 	/*opacity: .6;*/
