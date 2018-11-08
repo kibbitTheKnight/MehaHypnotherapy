@@ -91,27 +91,8 @@ $(document).ready(function() {
 		
 		footer.html(content);
 	})
-})
-
-
-let userInfo =
-{
-	username: "",
-	loggedin: false
-}
-
-function logout()
-{
-	$.post("/logout", function (res, status) {
-	  window.location.replace('/login');
-     }).fail(function () {
-          alert("Something went wrong??");
-     })
-}
-
-
-window.addEventListener("load", function load(event){
 	
+	//determine whether logged in or out
 	$.post('/getstate', function(res, status)
 	{
 		//get username and logged in status
@@ -136,4 +117,26 @@ window.addEventListener("load", function load(event){
 	{
 		alert("Something went wrong??");
 	});
+})
+
+
+let userInfo =
+{
+	username: "",
+	loggedin: false
+}
+
+function logout()
+{
+	$.post("/logout", function (res, status) {
+	  window.location.replace('/login');
+     }).fail(function () {
+          alert("Something went wrong??");
+     })
+}
+
+
+window.addEventListener("load", function load(event){
+	
+	
 },false);
