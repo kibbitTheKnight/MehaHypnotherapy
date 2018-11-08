@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var banner = $('#banner');
 	$.get('../html/banner.html', function(content) {
 		
-		// put html file into web page
+		// put banner file into web page
 		banner.html(content);
 		
 		// function navClick()
@@ -119,9 +119,8 @@ $(document).ready(function() {
 
 	// footer
 	var footer = $('#footer');
-	console.log('going to get the footer now');
 	$.get('../html/footer.html', function(content) {
-		console.log('loading footer');
+		// put footer file into web page
 		footer.html(content);
 	})
 })
