@@ -20,15 +20,13 @@ a {
 }
 
 #navContainer {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 3;
     width: 100%;
 }
 
 #logo {
-	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #bars {
@@ -104,16 +102,18 @@ a {
 	/* burgundy */
 	color: white;
 }
+
 #nav a:hover:not(.active){
 	
 }
+
 #subNav {
-	text-align: center;
+	display: none;
+	position: absolute;
 	background-color: #B97F6D;
+	text-align: center;
 	/*opacity: .6;*/
 	/* vanilla cream */
-	position: absolute;
-	display: none;
 }
 
 .active a {
@@ -126,8 +126,6 @@ a {
 #hero {
 	background-image: url('../img/flowers.jpg');
 	height: 110%;
-	top: 110px;
-	bottom: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -165,7 +163,7 @@ a {
 }
 
 #loggedin {
-	color: white;
+	color: black;
 }
 /*button under title of homepage*/
 button {
