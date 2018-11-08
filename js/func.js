@@ -111,16 +111,17 @@ $(document).ready(function() {
 				$("#loginbutton").show();
 				$("#loggedin").hide();
 			}
-			}).fail(function()
-			{
-				alert("Something went wrong??");
-			});
-		})
+		}).fail(function()
+		{
+			alert("Something went wrong??");
+		});
+	})
 
 	// footer
-	var footer = $('#footer');	
+	var footer = $('#footer');
+	console.log('going to get the footer now');
 	$.get('../html/footer.html', function(content) {
-		
+		console.log('loading footer');
 		footer.html(content);
 	})
 })
