@@ -68,7 +68,7 @@ html, body {
 #nav {
 	/*display: none;*/
 	text-align: center;
-    background-color: #FCFBE3;
+    background-color: #FFFFFF;
 	/* vanilla cream */
 	margin: auto 10%;
 }
@@ -85,7 +85,7 @@ html, body {
 	padding:0;
 	overflow: hidden;
 	background-color: white;
-	color:white;
+	color:black;
 	text-align: center;
 	text-decoration: none;
 	padding: 10px;
