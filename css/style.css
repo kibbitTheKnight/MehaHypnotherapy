@@ -219,12 +219,12 @@ blockquote {
 #form {
 	display: block;
 	margin: auto 35%;
-	/*background-color: #8E3D40;*/
-	/* burgundy */
+	padding: 20px;
+	background-color: #8e3d40;
 }
 
 label {
-	color: black;
+	color: #FFFFFF;
 }
 
 input[type=text], input[type=password] {
@@ -232,22 +232,31 @@ input[type=text], input[type=password] {
     padding: 8px 0;
     width: 100%;
     border: none;
-    border-bottom: 0.5px solid #8E3D40;
+    /*border-bottom: 0.5px solid #8E3D40;*/
     /* burgundy */
 }
 
 input[type=button] {
-	/* same as <button> */
-	
-	background-color: #8E3D40;
+	background-color: #FFFFFF;
 	/* burgundy */
-	color: white;
+	color: black;
+	margin: 20px auto;
 	padding: 10px; 
 	cursor: pointer;
 	border: none;
 	border-radius: 4px;
 
 	width: 100%;
+}
+
+#form h5 {
+	margin: 40px auto;
+	margin-bottom: 0;
+	color: #FFFFFF;
+}
+
+#form a {
+	text-decoration: underline;
 }
 
 #footer {
