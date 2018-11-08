@@ -28,30 +28,31 @@ $(document).ready(function() {
 				nav.style.display = "block";
 				navContainer.style.backgroundColor = "#FCFBE3";
 			}
-
-			// get coordinates for "Services" nav element and set postion of "subNav"
-			var rect = nav.children[2].getBoundingClientRect();
-			var subNav = document.getElementById("subNav");
-			subNav.style.left = rect.left + "px";
-			subNav.style.top = (rect.height + rect.top) + "px";
-
-			// services dropdown (both for services and the subNav)
-			nav.children[2].onmouseenter = function() {
-				document.getElementById("subNav").style.display = "block";
-			}
-			nav.children[2].onmouseleave = function() {
-				document.getElementById("subNav").style.display = "none";
-			}
-			subNav.onmouseenter = function() {
-				document.getElementById("subNav").style.display = "block";
-			}
-			subNav.onmouseleave = function() {
-				document.getElementById("subNav").style.display = "none";
-			}
 		})
+
+		// get coordinates for "Services" nav element and set postion of "subNav"
+		var rect = nav.children[2].getBoundingClientRect();
+		var subNav = document.getElementById("subNav");
+		subNav.style.left = rect.left + "px";
+		subNav.style.top = (rect.height + rect.top) + "px";
+
+		// services dropdown (both for services and the subNav)
+		nav.children[2].onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		nav.children[2].onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
+		subNav.onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		subNav.onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
 
 		// get path to set 'active' nav
 		var path = document.location.pathname;
+		console.log(path);
 		switch(path) {
 			case '/':
 			nav.children[0].classList.add('active');
