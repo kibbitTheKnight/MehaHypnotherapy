@@ -103,10 +103,12 @@ $(document).ready(function() {
 		console.log(userInfo.username);
 		console.log(userInfo.loggedin);
 		
+		console.log($("#logoutbutton").text());
+		console.log($("#loginbutton").text());
+		
 		//turn log in to log out if logged in
 		if(userInfo.loggedin)
 		{
-			//$("#loginbutton").text("Log out");
 			$("#loginbutton").hide();
 			$("#logoutbutton").show();
 			$("#loggedin").show();
