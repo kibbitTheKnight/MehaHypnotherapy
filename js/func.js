@@ -103,6 +103,7 @@ $(document).ready(function() {
 			{
 				$("#loginbutton").hide();
 				$("#logoutbutton").show();
+				$("#loggedin").innerHTML = "Hello, " + userInfo.username;
 				$("#loggedin").show();
 			}
 			else
