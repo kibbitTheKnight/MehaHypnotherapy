@@ -6,6 +6,10 @@ html, body {
 	color: black;
 }
 
+a {
+	text-decoration: none;
+}
+
 #banner {
 	width: 100%;
 }
@@ -94,7 +98,6 @@ html, body {
 }
 
 #nav a:hover {
-	text-decoration: none;
 	text-align: center;
 	background-color: #B97F6D;
 	/*opacity: .6;*/
@@ -102,10 +105,9 @@ html, body {
 	color: white;
 }
 #nav a:hover:not(.active){
-	text-decoration: none;
+	
 }
 #subNav {
-	text-decoration: none;
 	text-align: center;
 	background-color: #B97F6D;
 	/*opacity: .6;*/
@@ -114,10 +116,8 @@ html, body {
 	display: none;
 }
 
-
 .active a {
-	text-decoration: none;
-	background-color: #B97F6D;
+	background-color: #B97F6D !important;
 	/*background-size: 20px 500px;*/
 	color:white;
 	padding: 15px;
@@ -187,10 +187,6 @@ button:hover {
 	background-color: #FCFBE3;
 	/* vanilla cream */
 	color: black;
-}
-
-a button {
-	text-decoration: none;
 }
 
 .content {
