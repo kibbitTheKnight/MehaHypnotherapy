@@ -99,6 +99,9 @@ $(document).ready(function() {
 		userInfo.username = res.username;
 		userInfo.loggedin = res.loggedin;
 		
+		console.log(username);
+		console.log(loggedin);
+		
 		//turn log in to log out if logged in
 		if(userInfo.loggedin)
 		{
