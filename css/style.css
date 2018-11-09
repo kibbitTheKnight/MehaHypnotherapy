@@ -182,7 +182,7 @@ button {
 	border-radius: 4px;
 }
 
-button:hover {
+button:hover, input[type=button]:hover {
 	background-color: #FCFBE3;
 	/* vanilla cream */
 	color: black;
@@ -204,6 +204,10 @@ button:hover {
 
 #hypnotherapy, #services, #testimonials {
 	margin-bottom: 5%;
+}
+
+#services {
+	text-align: center;
 }
 
 #testimonials {
@@ -268,10 +272,6 @@ input[type=button] {
 
 #footer div, #footer h4, #footer h5{
 	color: white;
-}
-
-#services img {
-	border-radius: 0%;
 }
 
 #booking {
