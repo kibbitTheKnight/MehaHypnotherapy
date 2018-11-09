@@ -107,6 +107,7 @@ $(document).ready(function() {
 			{
 				$("#loginbutton").hide();
 				$("#logoutbutton").show();
+				$("#loggedin").text("Hello, " + userInfo.username);
 				$("#loggedin").show();
 			}
 			else
