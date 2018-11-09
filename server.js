@@ -139,7 +139,9 @@ app.get('/services/health', function (req, res) {
 app.get('/services/quantum', function (req, res) {
         res.sendFile(__dirname + '/html/services/quantum.html');
 });
-
+app.get('/services/energy', function (req, res) {
+        res.sendFile(__dirname + '/html/services/energy.html');
+});
 
 app.get('/login', function (req, res) {
 	if (req.session.loggedin != true) {

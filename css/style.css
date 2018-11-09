@@ -6,6 +6,10 @@ html, body {
 	color: black;
 }
 
+a {
+	text-decoration: none;
+}
+
 #banner {
 	width: 100%;
 }
@@ -16,15 +20,13 @@ html, body {
 }
 
 #navContainer {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 3;
     width: 100%;
 }
 
 #logo {
-	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #bars {
@@ -66,10 +68,11 @@ html, body {
 /* ^^^^^ bar animation ^^^^^ */
 
 #nav {
-	display: none;
+	/*display: none;*/
 	text-align: center;
-    background-color: #FCFBE3;
+    background-color: #FFFFFF;
 	/* vanilla cream */
+	margin: auto 10%;
 }
 
 #nav div {
@@ -84,9 +87,8 @@ html, body {
 	padding:0;
 	overflow: hidden;
 	background-color: white;
-	color:white;
+	color:black;
 	text-align: center;
-	text-decoration: none;
 	padding: 10px;
 	padding-right:20px;
 	padding-left: 20px;
@@ -94,30 +96,29 @@ html, body {
 }
 
 #nav a:hover {
-	text-decoration: none;
 	text-align: center;
 	background-color: #B97F6D;
-	opacity: .6;
+	/*opacity: .6;*/
 	/* burgundy */
 	color: white;
 }
+
 #nav a:hover:not(.active){
-	text-decoration: none;
-}
-#subNav {
-	text-decoration: none;
-	text-align: center;
-	background-color: #B97F6D;
-	opacity: .6;
-	/* vanilla cream */
-	position: absolute;
-	display: none;
+	
 }
 
+#subNav {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	background-color: #B97F6D;
+	text-align: center;
+	/*opacity: .6;*/
+	/* vanilla cream */
+}
 
 .active a {
-	text-decoration: none;
-	background-color: #B97F6D;
+	background-color: #B97F6D !important;
 	/*background-size: 20px 500px;*/
 	color:white;
 	padding: 15px;
@@ -126,8 +127,6 @@ html, body {
 #hero {
 	background-image: url('../img/flowers.jpg');
 	height: 110%;
-	top: 110px;
-	bottom: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -165,24 +164,19 @@ html, body {
 }
 
 #loggedin {
-	color: white;
+	color: black;
 }
 /*button under title of homepage*/
 button {
-	font-size: 20px;
-	text-align: center;
-	position: absolute;
 	background-color: #8E3D40;
-	opacity: .80;
-	margin: 0;
+	color: white;
+	display: block;
+	margin: auto;
+	padding: 10px; 
 	width: 220px;
 	height: 68px;
-	top: 300px;
-	margin-left: 40%;
-	margin-right: 40%;
-	/* burgundy */
-	color: white;
-	padding: 10px; 
+	opacity: .80;
+	font-size: 20px;
 	cursor: pointer;
 	border: none;
 	border-radius: 4px;
@@ -226,12 +220,12 @@ blockquote {
 #form {
 	display: block;
 	margin: auto 35%;
-	/*background-color: #8E3D40;*/
-	/* burgundy */
+	padding: 20px;
+	background-color: #8e3d40;
 }
 
 label {
-	color: black;
+	color: #FFFFFF;
 }
 
 input[type=text], input[type=password] {
@@ -239,22 +233,31 @@ input[type=text], input[type=password] {
     padding: 8px 0;
     width: 100%;
     border: none;
-    border-bottom: 0.5px solid #8E3D40;
+    /*border-bottom: 0.5px solid #8E3D40;*/
     /* burgundy */
 }
 
 input[type=button] {
-	/* same as <button> */
-	
-	background-color: #8E3D40;
+	background-color: #FFFFFF;
 	/* burgundy */
-	color: white;
+	color: black;
+	margin: 20px auto;
 	padding: 10px; 
 	cursor: pointer;
 	border: none;
 	border-radius: 4px;
 
 	width: 100%;
+}
+
+#form h5 {
+	margin: 40px auto;
+	margin-bottom: 0;
+	color: #FFFFFF;
+}
+
+#form a {
+	text-decoration: underline;
 }
 
 #footer {
@@ -290,4 +293,11 @@ a[href^="mailto:"]
 img {
 	margin-right: 10px;
 	position: relative;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
