@@ -325,8 +325,8 @@ img {
   background-color: #b8c9db;
 	text-align:center;
 	font-color: white;
-	top:100px;
-  position: absolute;
+	top:500px;
+ /* position: absolute; */
   height: 60%;
   width: 60%;
   left: 20%;
