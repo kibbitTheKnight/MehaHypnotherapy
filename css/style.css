@@ -79,6 +79,7 @@ a {
 
 #nav div {
 	margin-top: 40px;
+	position: fixed;
 	margin-bottom: 10px;
 }
 
@@ -124,6 +125,7 @@ a {
 	/*background-size: 20px 500px;*/
 	color:white;
 	padding: 15px;
+	
 }
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
