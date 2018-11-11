@@ -216,14 +216,13 @@ button:hover, input[type=button]:hover {
 	/* burgundy */
 }
 
-#hypnotherapy {
+#hypnotherapy,#services, #testimonials {
+	margin-bottom: 5%;
+}
+ #hypnotherapy {
 	font-family: Raleway;
 	font-variant: normal;
 	font-color: #8E3D40;
-	margin-bottom: 5%;
-}
- #services, #testimonials {
-	margin-bottom: 5%;
 }
 
 #services {
