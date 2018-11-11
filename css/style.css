@@ -320,3 +320,14 @@ img {
     margin-right: auto;
     width: 75%;
 }
+
+.box{ 
+  background-color: #6699CC;
+	text-align:center;
+	font-color: white;
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  left: 20%;
+  top: 20%;
+}
