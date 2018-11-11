@@ -17,6 +17,8 @@ $(document).ready(function() {
 			
 			// show / hide the nav menu when the dashes / X is clicked on
 			var navContainer = document.getElementById("navContainer");
+
+			/*tried to make sticky header but didnt work lol 
 			// When the user scrolls the page, execute myFunction 
 	window.onscroll = function() {myFunction()};
 
@@ -32,6 +34,7 @@ function myFunction() {
     navContainer.classList.remove("sticky");
   }
 } 
+*/
 			navContainer.classList.toggle("change");
 			
 			// nav container dropdown
