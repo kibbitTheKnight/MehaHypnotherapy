@@ -323,7 +323,7 @@ img {
 
 .box{ 
   background-color: #b8c9db;
-	text-align:center;
+	text-align:left;
 	font-color: white;
 	top:500px;
   position: center; 
@@ -331,6 +331,5 @@ img {
 	border-radius: 25px
   height: 60%;
   width: 60%;
-  left: 20%;
   top: 20%;
 }
