@@ -24,6 +24,18 @@
 	
 	<!-- Custom Site Style -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<!-- 'load' animation handler -->
+	<script type="text/javascript">
+		$(document).on({
+			ajaxStart: function() {
+				$('#loader').show();
+			},
+			ajaxStop: function() {
+				$('#loader').hide();
+			}    
+		});
+	</script>
 </head>
 
 
@@ -38,17 +50,6 @@
 		<!-- booking widget -->
 		<div id="booking">
 			
-			<!-- 'load' animation handler -->
-			<script type="text/javascript">
-				$(window).on({
-					ajaxStart: function() {
-						$('#loader').show();
-					},
-					ajaxStop: function() {
-						$('#loader').hide();
-					}    
-				});
-			</script>
 
 			<div id="loader"></div>
 
