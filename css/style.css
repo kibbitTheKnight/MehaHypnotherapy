@@ -45,7 +45,7 @@ a {
 	border-radius: 2px;
 	/* animation time */
 	transition: 0.4s;
-	position:fixed;
+	//position:fixed;
 }
 
 /* vvvvv bar animation vvvvv */
@@ -74,12 +74,12 @@ a {
     background-color: #FFFFFF;
 	/* vanilla cream */
 	margin: auto 10%;
-	position: fixed; 
+	//position: fixed; 
 }
 
 #nav div {
 	margin-top: 40px;
-	position: fixed;
+	//position: fixed;
 	margin-bottom: 10px;
 }
 
