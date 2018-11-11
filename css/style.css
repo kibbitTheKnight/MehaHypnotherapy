@@ -126,7 +126,7 @@ a {
 
 #hero {
 	background-image: url('../img/flowers.jpg');
-	height: 110%;
+	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
