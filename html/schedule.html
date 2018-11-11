@@ -34,8 +34,24 @@
 	<div class="content">
 		<h2 style="text-align:center;">Schedule with Meha</h2>
 
+
 		<!-- booking widget -->
 		<div id="booking">
+			
+			<!-- 'load' animation handler -->
+			<script type="text/javascript">
+				$(document).on({
+					ajaxStart: function() {
+						$('#loader').show();
+					},
+					ajaxStop: function() {
+						$('#loader').hide();
+					}    
+				});
+			</script>
+
+			<div id="loader"></div>
+
 			<script src="//simplybook.me/v2/widget/widget.js"></script>
 			<script>
 				var widget = new SimplybookWidget({
