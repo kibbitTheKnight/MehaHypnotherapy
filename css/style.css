@@ -123,6 +123,11 @@ a {
 	color:white;
 	padding: 15px;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
 
 #hero {
 	background-image: url('../img/flowers.jpg');
