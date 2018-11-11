@@ -73,6 +73,7 @@ a {
     background-color: #FFFFFF;
 	/* vanilla cream */
 	margin: auto 10%;
+	position:fixed;
 }
 
 #nav div {
