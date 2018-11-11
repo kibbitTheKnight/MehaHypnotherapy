@@ -4,21 +4,7 @@ $(document).ready(function() {
 	// nav & banner
 	var banner = $('#banner');
 	
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {myFunction()};
-	var navContainer = document.getElementById("navContainer");
 	
-	// Get the offset position of the navbar
-	var sticky = navContainer.offsetTop;
-	
-	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    navContainer.classList.remove("sticky");
-  }
-} 
 	$.get('../html/banner.html', function(content) {
 		
 		// put banner file into web page
@@ -31,6 +17,21 @@ function myFunction() {
 			
 			// show / hide the nav menu when the dashes / X is clicked on
 			var navContainer = document.getElementById("navContainer");
+			// When the user scrolls the page, execute myFunction 
+	window.onscroll = function() {myFunction()};
+
+	
+	// Get the offset position of the navbar
+	var sticky = navContainer.offsetTop;
+	
+	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    navContainer.classList.remove("sticky");
+  }
+} 
 			navContainer.classList.toggle("change");
 			
 			// nav container dropdown
