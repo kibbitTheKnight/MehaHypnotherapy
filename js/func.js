@@ -16,7 +16,7 @@ function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    navContainer.classList.remove("sticky");
   }
 } 
 	$.get('../html/banner.html', function(content) {
