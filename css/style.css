@@ -30,6 +30,7 @@ a {
 }
 
 #bars {
+	display: none;
 	cursor: pointer;
     width: 35px;
     padding: 5px 10px;
@@ -40,7 +41,7 @@ a {
 #bar-1, #bar-2, #bar-3 {
 	width: 30px;
 	height: 5px;
-	background-color: white;
+	background-color: black;
 	margin: 6px 0;
 	border-radius: 2px;
 	/* animation time */
@@ -52,27 +53,25 @@ a {
 .change div #bar-1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
-    background-color: black;
 }
 
 .change div #bar-2 {
 	opacity: 0;
-	background-color: black;
 }
 
 .change div #bar-3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
-    background-color: black;
 }
 
 /* ^^^^^ bar animation ^^^^^ */
 
 #nav {
+	display: block;
 	text-align: center;
     background-color: #FFFFFF;
 	/* vanilla cream */
-	margin: auto 10%; 
+	margin: auto 10%;
 }
 
 #nav a {
@@ -232,6 +231,10 @@ button:hover, input[type=button]:hover {
 	border: none;
 }
 
+#services button {
+	width: 100%;
+}
+
 #testimonials {
 	margin: 7% 3% 0 3%;
 	width: auto !important;
@@ -383,4 +386,38 @@ img {
 }
 .wordPadding0 {
 	margin-left: 435px;
+}
+
+@media only screen and (max-width : 1024px) {
+	/* tablet */
+	html, body {
+		/*background-color: red;*/
+	}
+
+	#hero-text h2 {
+		font-size: 4em;
+	}
+
+	#hero-text h3 {
+		font-size: 2em;
+	}
+
+	#bars {
+		display: block;
+	}
+
+	#nav {
+		display: none;
+	}
+
+	#navContainer {
+		height: 50px;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	/* mobile */
+	html, body {
+		/*background-color: green;*/
+	}
 }

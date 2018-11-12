@@ -10,13 +10,11 @@ $(document).ready(function() {
 		// put banner file into web page
 		banner.html(content);
 		
-		// function navClick()
-		var bars = $('#bars');
-		bars.click(function() {
-			// navigation functionality
-			
-			// show / hide the nav menu when the dashes / X is clicked on
-			var navContainer = document.getElementById("navContainer");
+		var $bars = $('#bars');
+		$bars.click(function() {
+			navClick();
+		});
+
 
 			/*tried to make sticky header but didnt work lol 
 			// When the user scrolls the page, execute myFunction 
@@ -35,43 +33,13 @@ function myFunction() {
   }
 } 
 */
-			navContainer.classList.toggle("change");
 			
-			// nav container dropdown
-			var nav = document.getElementById("nav");
-			if (nav.style.display == "block") {
-				// hide navbar
-				nav.style.display = "none";
-				navContainer.style.backgroundColor = "transparent";
-			}
-			else {
-				// show navbar
-				nav.style.display = "block";
-				navContainer.style.backgroundColor = "#FCFBE3";
-			}
-		})
 
 		// get coordinates for "Services" nav element and set postion of "subNav"
-		var rect = nav.children[2].getBoundingClientRect();
-		var subNav = document.getElementById("subNav");
-		subNav.style.left = rect.left + "px";
-		subNav.style.top = (rect.height + rect.top) + "px";
-
-		// services dropdown (both for services and the subNav)
-		nav.children[2].onmouseenter = function() {
-			document.getElementById("subNav").style.display = "block";
-		}
-		nav.children[2].onmouseleave = function() {
-			document.getElementById("subNav").style.display = "none";
-		}
-		subNav.onmouseenter = function() {
-			document.getElementById("subNav").style.display = "block";
-		}
-		subNav.onmouseleave = function() {
-			document.getElementById("subNav").style.display = "none";
-		}
+		setComponents();
 
 		// get path to set 'active' nav
+		var nav = document.getElementById('nav');
 		var path = document.location.pathname;
 		console.log(path);
 		switch(path) {
@@ -167,7 +135,79 @@ function logout()
      })
 }
 
+var $navContainer = $('#navContainer');
+var $nav = $('#nav');
 
-window.addEventListener("load", function load(event){
+window.onresize = function() {
+	setComponents();
+};
 
-},false);
+function setComponents() {
+	// set / reset elements on window resize
+
+	var desktop;
+	var winSize = $(window).width();
+	console.log(winSize);
+	$navContainer = $('#navContainer');
+	$nav = $('#nav');
+	$bars = $('#bars');
+	
+	var rect = nav.children[2].getBoundingClientRect();
+	var subNav = document.getElementById("subNav");
+	subNav.style.left = rect.left + "px";
+	subNav.style.top = (rect.height + rect.top) + "px";
+
+	if (winSize >= 1024)
+		desktop = true;
+	else {
+		desktop = false;
+	}
+
+	if (desktop) {
+		$nav.css('display', 'block');
+		$navContainer.css('height', 'auto');
+		$bars.css('display', 'none');
+	
+		// services dropdown (both for services and the subNav)
+		nav.children[2].onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		nav.children[2].onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
+		subNav.onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		subNav.onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
+	}
+	else {
+		$nav.css('display', 'none');
+		$navContainer.css('height', '50px');
+		$bars.css('display', 'block');
+	}
+}
+
+function navClick() {
+	// navigation functionality
+	
+	$navContainer = $('#navContainer');
+	$nav = $('#nav');
+	
+	// show / hide the nav menu when the dashes / X is clicked on
+	$navContainer.toggleClass("change");
+			
+	// nav container dropdown
+	if ($nav.css('display') == "block") {
+		// hide navbar
+		$nav.css('display', 'none');
+		$navContainer.css('height', '50px');
+	}
+	else {
+		// show navbar
+		$nav.css('display', 'block');
+		$navContainer.css('height', 'auto');
+	}
+
+}
