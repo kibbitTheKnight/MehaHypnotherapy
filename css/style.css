@@ -197,10 +197,11 @@ button {
 }
 
 button:hover, input[type=button]:hover {
-	background-color: #FCFBE3;
+	background-color: #a05557;
 	/* vanilla cream */
 	color: black;
 }
+
 
 .content {
 	margin: auto 5%;
@@ -344,15 +345,39 @@ img {
     width: 75%;
 }
 
+/*box for rates*/
+
 .box{ 
   background-color: #b8c9db;
 	text-align:left;
-	font-color: white;
+	padding-left: 15px;
+	text-color: white;
 	top:500px;
   position: center; 
 	border-color: #b7686b;
-	border-radius: 25px
+	margin-left: 230px;
+	margin-right: 170px;
+	border-radius: 15px 15px 15px 15px;
   height: 60%;
   width: 60%;
   top: 20%;
+}
+
+/*padding for the rates pricing*/
+
+.wordPadding {
+	margin-left: 490px;
+}
+.wordPadding400 {
+	margin-left: 340px;
+}
+
+.wordPadding700 {
+	margin-left: 425px;
+}
+.wordPadding4002 {
+	margin-left: 480px;
+}
+.wordPadding0 {
+	margin-left: 415px;
 }
