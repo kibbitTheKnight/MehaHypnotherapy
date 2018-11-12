@@ -27,13 +27,9 @@
 	
 	<!-- 'load' animation handler -->
 	<script type="text/javascript">
-		$(document).on({
-			ajaxStart: function() {
-				$('#loader').show();
-			},
-			ajaxStop: function() {
-				$('#loader').hide();
-			}    
+		$(document).bind('DOMNodeInserted', function() {
+			console.log('iframe inserted!');
+			$('#loader').hide();
 		});
 	</script>
 </head>
