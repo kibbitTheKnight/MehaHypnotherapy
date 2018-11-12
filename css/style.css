@@ -197,7 +197,7 @@ button {
 }
 
 button:hover, input[type=button]:hover {
-	background-color: #a05557;
+	background-color: #a055f57;
 	/* vanilla cream */
 	color: black;
 }
