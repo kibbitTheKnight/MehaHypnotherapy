@@ -395,11 +395,11 @@ img {
 	}
 
 	#hero-text h2 {
-		font-size: 4em;
+		font-size: 3em;
 	}
 
 	#hero-text h3 {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	#bars {
@@ -413,11 +413,19 @@ img {
 	#navContainer {
 		height: 50px;
 	}
+
+	#form {
+		margin: auto 20%;
+	}
 }
 
 @media only screen and (max-width : 600px) {
 	/* mobile */
 	html, body {
 		/*background-color: green;*/
+	}
+
+	#form {
+		margin: auto 15%;
 	}
 }
