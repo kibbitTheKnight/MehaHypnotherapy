@@ -250,6 +250,7 @@ blockquote {
 #form {
 	display: block;
 	margin: auto 35%;
+	margin-bottom: 20px;
 	padding: 20px;
 	background-color: #8e3d40;
 }
@@ -341,7 +342,7 @@ a[href^="mailto:"]
 	color: white;
 }
 
-img {
+img { 
 	margin-right: 10px;
 	position: relative;
 }
@@ -414,6 +415,12 @@ img {
 		height: 50px;
 	}
 
+	#footer img {
+		width: 100%;
+		height: auto;
+		max-width: 360px
+	}
+
 	#form {
 		margin: auto 20%;
 	}
@@ -425,7 +432,12 @@ img {
 		/*background-color: green;*/
 	}
 
+	#footer img {
+		width: 50%;
+		height: auto;
+	}
+
 	#form {
-		margin: auto 15%;
+		margin: auto 10%;
 	}
 }

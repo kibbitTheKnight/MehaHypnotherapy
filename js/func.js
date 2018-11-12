@@ -144,19 +144,22 @@ window.onresize = function() {
 
 function setComponents() {
 	// set / reset elements on window resize
-
 	var desktop;
+	var grids;
 	var winSize = $(window).width();
 	console.log(winSize);
+
 	$navContainer = $('#navContainer');
 	$nav = $('#nav');
 	$bars = $('#bars');
 	
+	// set subNav
 	var rect = nav.children[2].getBoundingClientRect();
 	var subNav = document.getElementById("subNav");
 	subNav.style.left = rect.left + "px";
 	subNav.style.top = (rect.height + rect.top) + "px";
 
+	// desktop or nah?
 	if (winSize >= 1024)
 		desktop = true;
 	else {
@@ -164,6 +167,7 @@ function setComponents() {
 	}
 
 	if (desktop) {
+		// set desktop properties
 		$nav.css('display', 'block');
 		$navContainer.css('height', 'auto');
 		$bars.css('display', 'none');
@@ -181,12 +185,23 @@ function setComponents() {
 		subNav.onmouseleave = function() {
 			document.getElementById("subNav").style.display = "none";
 		}
+
+		// change grid / column size
+		grids = $('.col-6');
+		grids.attr('class', 'col-3');
 	}
 	else {
+		// set mobile / tablet properties
 		$nav.css('display', 'none');
 		$navContainer.css('height', '50px');
 		$bars.css('display', 'block');
+
+		// change grid / column size
+		grids = $('.col-3');
+		grids.attr('class', 'col-6');
 	}
+
+
 }
 
 function navClick() {
