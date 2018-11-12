@@ -311,6 +311,7 @@ input[type=button] {
 @-webkit-keyframes load {
 	0% { -webkit-transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(360deg); }
+}
 
 @keyframes load {
 	from { transform: rotate(0deg); }
@@ -348,19 +349,18 @@ img {
 /*box for rates*/
 
 .box{ 
-  background-color: #b8c9db;
+	background-color: #b8c9db;
 	text-align:left;
 	padding-left: 15px;
-	text-color: white;
-	top:500px;
-  position: center; 
+	color: white;
+	top:500px; 
 	border-color: #b7686b;
 	margin-left: 230px;
 	margin-right: 170px;
 	border-radius: 15px 15px 15px 15px;
-  height: 60%;
-  width: 60%;
-  top: 20%;
+	height: 60%;
+	width: 60%;
+	top: 20%;
 }
 
 /*padding for the rates pricing*/
