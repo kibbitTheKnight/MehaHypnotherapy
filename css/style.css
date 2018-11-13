@@ -356,8 +356,9 @@ img {
 /*box for about*/
 .boxabout {
     background-color: #e8cacb;
-    width: 300px;
-    border: 25px solid #8E3D40;
+    width: 600px;
+	height: 400px;
+    border: 10px solid #8E3D40;
     padding: 25px;
     margin: 25px;
 }
