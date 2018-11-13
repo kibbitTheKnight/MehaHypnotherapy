@@ -353,6 +353,15 @@ img {
     margin-right: auto;
 }
 
+/*box for about*/
+.boxabout {
+    background-color: #e8cacb;
+    width: 300px;
+    border: 25px solid #8E3D40;
+    padding: 25px;
+    margin: 25px;
+}
+
 /*box for rates*/
 
 .box{ 
