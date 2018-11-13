@@ -348,13 +348,13 @@ img {
 }
 
 .toleft{
-   width:300px;
+   width:75%;
    float:left;
    height:100%;
  }
 
 .toright{
-   margin-left:300px;
+   margin-left:400px;
  }
 
 .center {
@@ -365,12 +365,14 @@ img {
 
 /*box for about*/
 .boxabout {
-    background-color: #e8cacb;
+    background-color: #dae3ec;
     width: 600px;
 	height: 750px;
-    border: 10px solid #8E3D40;
+    border: 10px solid #547ba5;
     padding: 25px;
-    margin: 25px;
+    margin-right: 100px;
+	margin-left: 50px;
+	border-radius: 50px 50px 50px 50px;
 }
 
 /*box for rates*/
