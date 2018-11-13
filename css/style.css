@@ -347,6 +347,16 @@ img {
 	position: relative;
 }
 
+.toleft{
+   width:300px;
+   float:left;
+   height:100%;
+ }
+
+.toright{
+   margin-left:300px;
+ }
+
 .center {
     display: block;
     margin-left: auto;
@@ -357,7 +367,7 @@ img {
 .boxabout {
     background-color: #e8cacb;
     width: 600px;
-	height: 400px;
+	height: 750px;
     border: 10px solid #8E3D40;
     padding: 25px;
     margin: 25px;
