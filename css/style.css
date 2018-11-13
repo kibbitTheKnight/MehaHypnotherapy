@@ -372,7 +372,7 @@ img {
     padding: 25px;
     margin-right: 100px;
 	margin-left: 50px;
-	border-radius: 50px 50px 50px 50px;
+	/*border-radius: 50px 50px 50px 50px;*/
 }
 
 /*box for rates*/
