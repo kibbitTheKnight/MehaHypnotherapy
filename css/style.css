@@ -363,11 +363,12 @@ img {
     margin-right: auto;
 }
 
+
 /*box for about*/
 .boxabout {
     background-color: #dae3ec;
     width: 600px;
-	height: 750px;
+	height: 810px;
     border: 10px solid #547ba5;
     padding: 25px;
     margin-right: 100px;
@@ -390,6 +391,23 @@ img {
 	height: 60%;
 	width: 60%;
 	top: 20%;
+}
+
+.box2{ 
+	background-color: #b8c9db;
+	text-align:left;
+	padding-left: 25px;
+	color: white;
+	top:500px; 
+	border: 10px solid #547ba5;
+	/*border-color: #b7686b;*/
+	border-radius: 15px 15px 15px 15px;
+	height: 500px;
+	width: 35%;
+	top: 20%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*padding for the rates pricing*/
@@ -463,3 +481,11 @@ img {
 		margin: auto 10%;
 	}
 }
+
+.col3 {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col3:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
