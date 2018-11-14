@@ -363,6 +363,7 @@ img {
     margin-right: auto;
 }
 
+
 /*box for about*/
 .boxabout {
     background-color: #dae3ec;
@@ -389,6 +390,21 @@ img {
 	border-radius: 15px 15px 15px 15px;
 	height: 60%;
 	width: 60%;
+	top: 20%;
+}
+
+.box2{ 
+	background-color: #b8c9db;
+	text-align:left;
+	padding-left: 25px;
+	color: white;
+	top:500px; 
+	border-color: #b7686b;
+	margin-left: 450px;
+	margin-right: 170px;
+	border-radius: 15px 15px 15px 15px;
+	height: 500px;
+	width: 35%;
 	top: 20%;
 }
 
