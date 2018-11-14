@@ -88,18 +88,18 @@ function myFunction() {
 			if(userInfo.loggedin)
 			{
 				$("#loginbutton").style.display = "none";
-				$("#loginbutton").hide();
+				//$("#loginbutton").hide();
 				$("#logoutbutton").style.display = "block";
-				$("#logoutbutton").show();
+				//$("#logoutbutton").show();
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
 			}
 			else
 			{
 				$("#logoutbutton").style.display = "none";
-				$("#logoutbutton").hide();
+				//$("#logoutbutton").hide();
 				$("#loginbutton").style.display = "block";
-				$("#loginbutton").show();
+				//$("#loginbutton").show();
 				$("#loggedin").hide();
 			}
 		}).fail(function()
