@@ -91,12 +91,15 @@ function myFunction() {
 				$("#logoutbutton").show();
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
+				$("#dashButton").show();
+				
 			}
 			else
 			{
 				$("#logoutbutton").hide();
 				$("#loginbutton").show();
 				$("#loggedin").hide();
+				$("#dashButton").hide();
 			}
 		}).fail(function()
 		{
