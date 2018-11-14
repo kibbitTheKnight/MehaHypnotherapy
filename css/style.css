@@ -114,19 +114,6 @@ a {
 	
 }
 
-/* Services youtube videos*/
-#services a:hover{
-	color:darkblue;
-}
-
-#services a:active{
-	color:lightblue;
-}
-
-#services a:visited{
-	color:purple;
-}
-
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
