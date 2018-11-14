@@ -41,7 +41,6 @@ function myFunction() {
 		// get path to set 'active' nav
 		var nav = document.getElementById('nav');
 		var path = document.location.pathname;
-		console.log(path);
 		switch(path) {
 			case '/':
 				nav.children[0].classList.add('active');
@@ -85,24 +84,22 @@ function myFunction() {
 			userInfo.username = res.username;
 			userInfo.loggedin = res.loggedin;
 			
-			console.log(userInfo.username);
-			console.log(userInfo.loggedin);
-			
-			console.log($("#logoutbutton").text());
-			console.log($("#loginbutton").text());
-			
 			//turn log in to log out if logged in
 			if(userInfo.loggedin)
 			{
 				$("#loginbutton").hide();
+				$("#loginbutton").style.display = "none";
 				$("#logoutbutton").show();
+				$("#logoutbutton").style.display = "block";
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
 			}
 			else
 			{
 				$("#logoutbutton").hide();
+				$("#logoutbutton").style.display = "none";
 				$("#loginbutton").show();
+				$("#loginbutton").style.display = "block";
 				$("#loggedin").hide();
 			}
 		}).fail(function()
