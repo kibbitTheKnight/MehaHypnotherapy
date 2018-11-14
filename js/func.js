@@ -96,7 +96,7 @@ function myFunction() {
 			{
 				$("#loginbutton").hide();
 				$("#logoutbutton").show();
-				$("#loggedin").text("Hello, " + userInfo.username);
+				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
 			}
 			else
