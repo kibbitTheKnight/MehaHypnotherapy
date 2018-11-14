@@ -87,19 +87,19 @@ function myFunction() {
 			//turn log in to log out if logged in
 			if(userInfo.loggedin)
 			{
-				$("#loginbutton").hide();
 				$("#loginbutton").style.display = "none";
-				$("#logoutbutton").show();
+				$("#loginbutton").hide();
 				$("#logoutbutton").style.display = "block";
+				$("#logoutbutton").show();
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
 			}
 			else
 			{
-				$("#logoutbutton").hide();
 				$("#logoutbutton").style.display = "none";
-				$("#loginbutton").show();
+				$("#logoutbutton").hide();
 				$("#loginbutton").style.display = "block";
+				$("#loginbutton").show();
 				$("#loggedin").hide();
 			}
 		}).fail(function()
