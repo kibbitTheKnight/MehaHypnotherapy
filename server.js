@@ -279,3 +279,9 @@ app.get('/db', function (req, res) {
 
 // start app on port
 app.listen(port, () => console.log("active on port: " + port));
+
+// Handle 404
+app.use(function(req, res, next) {
+    res.status(404);
+    res.send('404: File Not Found');
+});
