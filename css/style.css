@@ -396,15 +396,16 @@ img {
 .box2{ 
 	background-color: #b8c9db;
 	text-align:left;
-	/*padding-left: 25px;*/
 	color: white;
-	/*top:500px; */
-	border-color: #b7686b;
-	/*margin-left: 450px;
-	margin-right: 170px;*/
+	border: 10px solid #547ba5;
+	/*border-color: #b7686b;*/
 	border-radius: 15px 15px 15px 15px;
 	width: 60%;
+	/*top:500px; */
 	/*top: 20%;*/
+	/*padding-left: 25px;*/
+	/*margin-left: 450px;
+	margin-right: 170px;*/
 	display: block;
     margin-left: auto;
     margin-right: auto;
