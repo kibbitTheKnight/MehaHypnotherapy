@@ -367,13 +367,12 @@ img {
 /*box for about*/
 .boxabout {
     background-color: #dae3ec;
-    width: 600px;
-	height: 810px;
     border: 10px solid #547ba5;
     padding: 25px;
+    /*
     margin-right: 100px;
 	margin-left: 50px;
-	/*border-radius: 50px 50px 50px 50px;*/
+	border-radius: 50px 50px 50px 50px;*/
 }
 
 /*box for rates*/
