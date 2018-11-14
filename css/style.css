@@ -115,15 +115,15 @@ a {
 }
 
 /* Services youtube videos*/
-.services a:hover{
+#services a:hover{
 	color:darkblue;
 }
 
-.services a:active{
+#services a:active{
 	color:lightblue;
 }
 
-.services a:visited{
+#services a:visited{
 	color:purple;
 }
 
