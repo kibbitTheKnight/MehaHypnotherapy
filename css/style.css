@@ -400,12 +400,15 @@ img {
 	color: white;
 	top:500px; 
 	border-color: #b7686b;
-	margin-left: 450px;
-	margin-right: 170px;
+	/*margin-left: 450px;
+	margin-right: 170px;*/
 	border-radius: 15px 15px 15px 15px;
 	height: 500px;
 	width: 35%;
 	top: 20%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*padding for the rates pricing*/
