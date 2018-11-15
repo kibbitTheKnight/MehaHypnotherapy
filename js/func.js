@@ -91,7 +91,7 @@ function myFunction() {
 				$("#logoutbutton").show();
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
-				$("#dashbutton").show();
+				$("#dashButton").show();
 				
 			}
 			else
@@ -99,7 +99,7 @@ function myFunction() {
 				$("#logoutbutton").hide();
 				$("#loginbutton").show();
 				$("#loggedin").hide();
-				$("#dashbutton").hide();
+				$("#dashButton").hide();
 			}
 		}).fail(function()
 		{
