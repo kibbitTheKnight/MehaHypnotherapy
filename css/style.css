@@ -332,7 +332,7 @@ input[type=button] {
 	margin-bottom: 50px;
 }
 
-iframe {
+#dashiframe {
 	width: 50%;
 	height: 45%;
 	border: 1px solid black;
