@@ -101,6 +101,10 @@ function myFunction() {
 				$("#loggedin").hide();
 				$("#dashButton").hide();
 			}
+			if(document.location.pathname == '/dashboard')
+			{
+				$("#dashButton").hide();
+			}
 		}).fail(function()
 		{
 			alert("Something went wrong??");
