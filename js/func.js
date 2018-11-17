@@ -92,7 +92,6 @@ function myFunction() {
 				$("#loggedin").text("Welcome " + userInfo.username + "!");
 				$("#loggedin").show();
 				$("#dashButton").show();
-				$("#logoutNav").show();
 				
 			}
 			else
@@ -101,7 +100,6 @@ function myFunction() {
 				$("#loginbutton").show();
 				$("#loggedin").hide();
 				$("#dashButton").hide();
-				$("#logoutNav").hide();
 			}
 			if(document.location.pathname == '/dashboard')
 			{
