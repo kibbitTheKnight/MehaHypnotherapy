@@ -158,8 +158,12 @@ function setComponents() {
 	// set subNav
 	var rect = nav.children[2].getBoundingClientRect();
 	var subNav = document.getElementById("subNav");
+	rect = nav.children[6].getBoundingClientRect();
+	var logSubNav = $("#logoutNav");
 	subNav.style.left = rect.left + "px";
 	subNav.style.top = (rect.height + rect.top) + "px";
+	logSubNav.style.left = rect.left + "px";
+	logSubNav.style.top = (rect.height + rect.top) + "px";
 
 	// desktop or nah?
 	if (winSize >= 1024)
@@ -185,6 +189,12 @@ function setComponents() {
 			document.getElementById("subNav").style.display = "block";
 		}
 		subNav.onmouseleave = function() {
+			document.getElementById("subNav").style.display = "none";
+		}
+		nav.children[6].onmouseenter = function() {
+			document.getElementById("subNav").style.display = "block";
+		}
+		nav.children[6].onmouseleave = function() {
 			document.getElementById("subNav").style.display = "none";
 		}
 
