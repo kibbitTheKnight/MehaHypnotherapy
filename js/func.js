@@ -77,6 +77,12 @@ function myFunction() {
 				break;
 		}
 		
+		if(path == "/createAccount")
+		{
+			$('#passNoMatch').hide();
+			$('#takenUsername').hide();
+		}
+		
 		//determine whether logged in or out
 		$.post('/getstate', function(res, status)
 		{

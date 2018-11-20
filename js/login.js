@@ -36,7 +36,8 @@ function createAccount()
 	 console.log($('#pass').val());
 	 if($('#pass').val() != $('#repass').val())
 	 {
-		 alert("signup failed, passwords did not match");
+		 $('#passNoMatch').show();
+		 //alert("Signup failed, passwords did not match");
 		 return;
 	 }
 	 
@@ -56,11 +57,12 @@ function createAccount()
 			console.log(status);
 			if(status != 200)
 			{
-				alert("Username is already taken");
+				$('#takenUsername').show();
+				//alert("Username is already taken");
 			}
 			else
 			{
-				alert("signup failed");
+				alert("Signup Failed");
 			}
      });
 }
