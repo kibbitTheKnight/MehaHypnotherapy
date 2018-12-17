@@ -442,6 +442,31 @@ img {
     background-color: #dde5ee;
 }
 
+.collapsible2 {
+    background-color: white;
+    color: #435c83;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+}
+
+.active, .collapsible2:hover {
+    color: #7492c1;
+}
+
+.collapsecontent2 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+	text-align: center;
+	color: #748fb8;
+    /*background-color: #dde5ee;*/
+}
+
 /*padding for the rates pricing*/
 
 .wordPadding {
